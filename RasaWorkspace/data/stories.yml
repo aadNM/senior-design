@@ -2,6 +2,46 @@ version: "2.0"
 
 stories:
 
+- story: seach hospital happy path
+  steps:
+  - inten: great
+  - action: utter_great
+  - intent: search_provider{"facility_type":"hospital", "location":"Lawrence"}
+  - action: action_facility_search
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: search hospital + location
+  steps:
+  - inten: great
+  - action: utter_great
+  - intent: search_provider{"facility_type":"hospital"}
+  - action: utter_ask_location
+  - intent: inform{"location":"Lawrence"}
+  - action: action_facility_search
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: seach hospital happy path
+  steps:
+  - inten: great
+  - action: utter_great
+  - intent: search_provider{"facility_type":"Community Mental Health Center", "location":"KC"}
+  - action: action_facility_search
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: search for community mental health center
+  steps:
+  - inten: great
+  - action: utter_great
+  - intent: search_provider{"facility_type":"Community Mental Health Center"}
+  - action: utter_ask_location
+  - intent: inform{"location":"Jefferson County"}
+  - action: action_facility_search
+  - intent: thanks
+  - action: utter_goodbye 
+
 - story: happy path
   steps:
   - intent: greet

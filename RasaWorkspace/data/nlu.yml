@@ -17,6 +17,7 @@ nlu:
     - goodevening
     - good afternoon
 
+
 - intent: goodbye
   examples: |
     - good afternoon
@@ -31,6 +32,108 @@ nlu:
     - bye bye
     - see you later
 
+
+- intent: inform
+  examples: |
+    - [Lawrence](location)
+    - [Kansas](location)
+    - [Wyandotte County](location)
+    - [Kansas City](location)
+    - [KC](location)
+    - [Wichita](location)
+    - [Douglas County](location)
+    - [Jefferson County](location)
+    - [Manhattan](location)
+    - [Topeka](location)
+    - [Missouri](location)
+    - [Colorado](location)
+    - [Nebraska](location)
+    - [Illinois](location)
+    - [New York](location)
+    - [Georgia](location)
+    - [County](location)
+    - [Shelby County](location)
+    - [Overland Park](location)
+    - [Mission County](location)
+    - [Ottawa](location)
+    - [Oklahoma](location)
+
+
+- intent: search_provider
+  examples: |
+    - [hospital](facility_type)
+    - Find me a nearby [hospital](facility_type)
+    - find me a nearby [Community Mental Health Center](facility_type)
+    - find me a nearby [CMHC](facility_type)
+    - find the nearest [Community Mental Health Center](facility_type)
+    - find the nearest [CMHC](facility_type)
+    - Where is the [Community Mental Health Center](facility_type)
+    - where is the nearest [Community Mental Health Center](facility_type)
+    - where is the closest [Community Mental Health Center](facility_type)
+    - Where is the [CMHC](facility_type)
+    - where is the nearest [CMHC](facility_type)
+    - where is the closest [CMHC](facility_type)
+    - I am [homeless](service_type)
+    - I don not have [food](service_type)
+    - I don't have [food](service_type)
+    - I need a [hospital](facility_type)
+    - I need a [counselor](professional_type)
+    - I need [psychiatrist](professional_type)
+    - I need a [doctor](professional_type)
+    - I need a [therapist](professional_type)
+    - I need [food](service_type)
+    - I need a [job](service_type)
+    - I need a place to [stay](facility_type)
+    - help me find a [hospital](facility_type)
+    - help me find a [doctor](professional_type)
+    - help me find a [psychiatrist](professional_type)
+    - help me find a [counselor](professional_type)
+    - help me find a [therapist](professional_type)
+    - help me find a [job](service_type)
+    - help me find a nearby [hospital](facility_type)
+    - help me find a [Community Mental Health Center](facility_type)
+    - help me find a [CMHC](facility_type)
+
+
+- intent: talk
+  examples: |
+    - [I want someone to talk to](service_type)
+    - [I need to speak to someone ](service_type)
+    - [I just want to talk](service_type)
+    - [I only need to talk](service_type)
+    - [I want to rant](service_type)
+    - [I just want some comapany](service_type)
+
+
+- intent: suicide
+  examples: |
+    - I want to die
+    - I wanna die
+    - I feel like dying
+    - I don't want to be here anymore
+    - I want to sleep and never wake up
+    - I am tired of living
+    - I don't want to do this anymore
+    - they will be better without me
+    - I want to end it
+    - I want to end this
+    - I can't take it anymore
+    - I want to kill myself
+    - I wish I was dead
+    - I just can't take it anymore
+    - They'll be sorry when I'm gone
+    - I want to go to sleep forever
+    - I want to escape
+
+
+- intent: self_harm
+  examples: |
+    - I want to cut
+    - I want to feel something
+    - I am thinking about hurting myself
+    - I am thinking about cutting myself
+
+
 - intent: affirm
   examples: |
     - yes
@@ -39,6 +142,14 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - right
+    - yep
+    - obviously
+    - true
+    - I know right
+    - ikr
+    - I agree
+
 
 - intent: deny
   examples: |
@@ -49,40 +160,72 @@ nlu:
     - don't like that
     - no way
     - not really
+    - nah
+    - I don't want to
+    - what about no
+    - I refuse
+
 
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - [perfect](mood_type)
+    - [great](mood_type)
+    - [amazing](mood_type)
+    - [feeling like a king](mood_type)
+    - [wonderful](mood_type)
+    - I am feeling [very good](mood_type)
+    - I am [great](mood_type)
+    - I am [amazing](mood_type)
+    - [I am going to save the world](mood_type)
+    - [super stoked](mood_type)
+    - [extremely good](mood_type)
+    - [so so perfect](mood_type)
+    - [so good](mood_type)
+    - [so perfect](mood_type)
+    - I feel [good](mood_type)
+    - I'm [good](mood_type)
+    - I'm [okay](mood_type)
+    - My day is [going well](mood_type)
+    - I feel [great](mood_type)
+    - This is a [good day](mood_type)
+    - It is a [beautiful day](mood_type)
+    - I am [enjoying](mood_type) my day
+
 
 - intent: mood_unhappy
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - my day was [horrible](mood_type)
+    - I am [sad](mood_type)
+    - [I don't feel very well](mood_type)
+    - I am [disappointed](mood_type)
+    - [super sad](mood_type)
+    - I'm [so sad](mood_type)
+    - [sad](mood_type)
+    - [very sad](mood_type)
+    - [unhappy](mood_type)
+    - [not good](mood_type)
+    - [not very good](mood_type)
+    - [extremly sad](mood_type)
+    - [so saad](mood_type)
+    - [so sad](mood_type)
+    - [angry](mood_type)
+    - [stressed](mood_type)
+    - [depressed](mood_type)
+    - [so mad](mood_type)
+    - [mad](mood_type)
+    - [fucking angry](mood_type)
+    - [lonely](mood_type)
+    - [alone](mood_type)
+    - [insulted](mood_type)
+    - [ashamed](mood_type)
+    - [violated](mood_type)
+    - [worried](mood_type)
+    - [scared](mood_type)
+    - [concerned](mood_type)
+    - [firghtened](mood_type)
+    - [anxious](mood_type)
+    - I am [not okay](mood_type)
+
 
 - intent: bot_challenge
   examples: |

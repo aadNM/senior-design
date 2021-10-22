@@ -19,7 +19,24 @@ intents:
     use_entities: true
 - bot_challenge:
     use_entities: true
-entities: []
+- search_provider:
+    use_entities: true
+- suicide:
+    use_entities: true
+- self_harm:
+    use_entities: true
+- mood_concerned:
+    use_entities: true
+- talk:
+    use_entities: true
+- inform:r
+    use_entities: true
+entities:
+- location
+- facility_type
+- mood_type
+- professional_type
+- service_type
 slots: {}
 responses:
   utter_greet:
