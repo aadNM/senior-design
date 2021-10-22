@@ -1,10 +1,10 @@
-a:2:{i:0;s:1384:"
+a:2:{i:0;s:1386:"
 
 <a href="/index.php?r=activity%2Flink&id=3">
 
     <div class="media">
                     <!-- Show user image -->
-            <span class="pull-left"><img class="media-object img-rounded" src="/uploads/profile_image/699e0970-c147-49c8-9af0-dd8e44e6248e.jpg?m=1634868046" width="32" alt="Profile picture of David Roberts" style="width: 32px; height: 32px" data-contentcontainer-id="3"></span>        
+            <span class="pull-left"><img class="media-object img-rounded" src="/uploads/profile_image/3943688d-b8ec-41ba-999a-1b9cd3f8b635.jpg?m=1634943504" width="32" alt="Profile picture of David Roberts" style="width: 32px; height: 32px" data-contentcontainer-id="3"></span>        
         <!-- Show space image, if you are outside from a space -->
                                     <div class="img-space pull-left space-profile-acronym-1 space-acronym" style=" background-color: #6fdbe8; width: 20px; height: 20px; font-size: 8.8px; padding: 3.6px 0; border-radius: 2px;" data-contentcontainer-id="2">WS</div><img class="img-space pull-left space-profile-image-1 img-rounded profile-user-photo hidden" src="/static/img/default_space.jpg" alt="Welcome Space" style=" width: 20px; height: 20px" data-contentcontainer-id="2">            
         
@@ -14,7 +14,7 @@ a:2:{i:0;s:1384:"
             <strong>David Roberts</strong> joined the space <strong>Welcome Space</strong>            <br>
 
             <!-- show time -->
-            <time class="tt time timeago" data-ui-addition="timeago" datetime="2021-10-22T02:00:46+00:00" title="Oct 22, 2021 - 2:00 AM">Oct 22, 2021 - 2:00 AM</time>        </div>
+            <time class="tt time timeago" data-ui-addition="timeago" datetime="2021-10-22T22:58:24+00:00" title="Oct 22, 2021 - 10:58 PM">Oct 22, 2021 - 10:58 PM</time>        </div>
     </div>
 
 </a>

@@ -1,0 +1,20 @@
+<?php
+return array (
+  '<strong>Confirm</strong> task deletion' => '',
+  '<strong>Create</strong> new task' => '<strong>Vytvořit</strong> nový úkol',
+  '<strong>Edit</strong> task' => '<strong>Upravit</strong> úkol',
+  'Add checkpoint...' => '',
+  'Add reminder' => '',
+  'Add responsible users' => '',
+  'Assign users' => 'Přiřaďte uživatele',
+  'Assignment' => '',
+  'Basic' => 'Základní',
+  'Checklist' => '',
+  'Do you really want to delete this task?' => 'Opravdu chcete smazat tento úkol?',
+  'Edit item (empty field will be removed)...' => '',
+  'Files' => 'Soubory',
+  'Leave empty to let anyone work on this task.' => '',
+  'Scheduling' => '',
+  'Title and Color' => '',
+  'Title of your task' => '',
+);

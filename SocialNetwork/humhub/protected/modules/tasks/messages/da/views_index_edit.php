@@ -1,0 +1,20 @@
+<?php
+return array (
+  '<strong>Confirm</strong> task deletion' => '',
+  '<strong>Create</strong> new task' => '<strong>Opret</strong> ny opgave',
+  '<strong>Edit</strong> task' => '<strong>Rediger</strong> opgave',
+  'Add checkpoint...' => '',
+  'Add reminder' => '',
+  'Add responsible users' => '',
+  'Assign users' => 'Tildel bruger(e)',
+  'Assignment' => '',
+  'Basic' => 'Basis',
+  'Checklist' => '',
+  'Do you really want to delete this task?' => 'Vil du virkelig slette denne opgave?',
+  'Edit item (empty field will be removed)...' => '',
+  'Files' => 'Filer',
+  'Leave empty to let anyone work on this task.' => '',
+  'Scheduling' => '',
+  'Title and Color' => '',
+  'Title of your task' => '',
+);

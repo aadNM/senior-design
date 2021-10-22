@@ -4,9 +4,9 @@
     'db' => 
     array (
       'class' => 'yii\\db\\Connection',
-      'dsn' => 'mysql:host=localhost;port=80;dbname=socialnetwork',
-      'username' => 'root',
-      'password' => 'Young00528',
+      'dsn' => 'mysql:host=localhost;port=80;dbname=socialnet',
+      'username' => 'socialnet',
+      'password' => 'ku-design',
     ),
     'user' => 
     array (
@@ -31,14 +31,14 @@
       'db' => 
       array (
         'installer_hostname' => 'localhost',
-        'installer_database' => 'socialnetwork',
+        'installer_database' => 'socialnet',
       ),
     ),
-    'config_created_at' => 1634868049,
+    'config_created_at' => 1634943506,
     'horImageScrollOnMobile' => '1',
     'databaseInstalled' => true,
     'installed' => true,
   ),
-  'name' => 'SocialDilema',
+  'name' => 'Social Dilema',
   'language' => 'en-US',
 ); ?>
