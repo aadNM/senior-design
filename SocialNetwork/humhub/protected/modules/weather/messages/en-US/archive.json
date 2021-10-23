@@ -1,0 +1,26 @@
+{
+    "<strong>Weather</strong>": [
+        "<strong>Weather</strong>"
+    ],
+    "Weather Settings": [
+        "Weather Settings"
+    ],
+    "Weather URL:": [
+        "Weather URL:"
+    ],
+    "<strong>Weather</strong> module configuration": [
+        "<strong>Weather</strong> module configuration"
+    ],
+    "Save": [
+        "Save"
+    ],
+    "There is an update for the Weather module! ({version})": [
+        "There is an update for the Weather module! ({version})"
+    ],
+    "Receive Notifications for administrative events like available updates": [
+        "Receive Notifications for administrative events like available updates"
+    ],
+    "Administrative": [
+        "Administrative"
+    ]
+}

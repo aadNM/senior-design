@@ -40,3 +40,61 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1634943368.9904
     'REQUEST_TIME' => 1634943368
 ]
+2021-10-23 04:16:37 [::1][1][9k39faa7oum049da1cjudvitpc][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Syntax error. in /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/helpers/BaseJson.php:133
+Stack trace:
+#0 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/helpers/BaseJson.php(107): yii\helpers\BaseJson::handleJsonError(4)
+#1 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/libs/BaseSettingsManager.php(115): yii\helpers\BaseJson::decode('V166Vx16ecNWSKq...')
+#2 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/modules/rest/models/ConfigureForm.php(76): humhub\libs\BaseSettingsManager->getSerialized('jwtKey')
+#3 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/modules/rest/controllers/AdminController.php(24): humhub\modules\rest\models\ConfigureForm->loadSettings()
+#4 [internal function]: humhub\modules\rest\controllers\AdminController->actionIndex()
+#5 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#7 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('index', Array)
+#8 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('rest/admin/inde...', Array)
+#9 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#10 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/index.php(25): yii\base\Application->run()
+#11 {main}
+2021-10-23 04:16:37 [::1][1][9k39faa7oum049da1cjudvitpc][info][application] $_GET = [
+    'r' => 'rest/admin/index'
+    '_pjax' => '#layout-content'
+    '_' => '1634962594626'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15'
+    'HTTP_REFERER' => 'http://localhost/index.php?r=admin%2Fmodule%2Flist'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_X_CSRF_TOKEN' => 'TxCHK7tCkmzDxmxjI0PdjFO0NK5YZC_MgNQJ0yAThGU-IMpH6gnfPIyEGSd5KqzHIPtZ4zYhWZzG4TyFT2fpBg=='
+    'HTTP_COOKIE' => '_identity=abb5b0c7949b24b75b867f97428f58f994c72780ae288c97b6efd0cb5d6b8fc0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d68bba96-0a48-4137-9ba7-cbcf5f9fc357%22%2C2592000%5D%22%3B%7D; _csrf=2692b60aca5417d38018cc1b9918027e39c09d913fe9c09d74972e2cc22470baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22q0MlQKMPOBuDZiqKsOmMnEvPF55Votmc%22%3B%7D; PHPSESSID=9k39faa7oum049da1cjudvitpc; cookieconsent_status=dismiss'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Unix) PHP/8.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub'
+    'SERVER_ADMIN' => 'aad21nm@gmail.com'
+    'SCRIPT_FILENAME' => '/Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/index.php'
+    'REMOTE_PORT' => '50709'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=rest%2Fadmin%2Findex&_pjax=%23layout-content&_=1634962594626'
+    'REQUEST_URI' => '/index.php?r=rest%2Fadmin%2Findex&_pjax=%23layout-content&_=1634962594626'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1634962597.6437
+    'REQUEST_TIME' => 1634962597
+]

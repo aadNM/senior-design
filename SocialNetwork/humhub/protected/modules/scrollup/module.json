@@ -1,0 +1,21 @@
+{
+    "id": "scrollup",
+    "version": "1.0.6",
+    "name": "Scroll Up",
+    "description": "Allows you to scroll up in one action!",
+    "humhub": {
+        "minVersion": "1.4"
+    },
+    "keywords": ["scrolling", "module"],
+    "screenshots": ["assets/Screenshot_1.gif"],
+    "homepage": "https://github.com/GreenMeteor",
+    "issues": "https://github.com/GreenMeteor/humhub-scrollup-module/issues",
+    "authors": [
+        {
+            "name": "Green Meteor",
+            "email": "kodo@greenmeteor.net",
+            "homepage": "https://github.com/GreenMeteor",
+            "role": "Developer"
+        }
+    ]
+}

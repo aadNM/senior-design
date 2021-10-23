@@ -1,0 +1,16 @@
+{
+    "id": "fcm-push",
+    "name": "FireBase - Push Notifications",
+    "description": "Mobile push notifications using Google FireBase.",
+    "keywords": [
+        "push",
+        "notifications",
+        "firebase"
+    ],
+    "homepage": "https://github.com/humhub-contrib/fcm-push",
+    "humhub": {
+        "minVersion": "1.5"
+    },
+    "version": "1.0.1",
+    "screenshots": []
+}

@@ -23,6 +23,10 @@
       'class' => 'yii\\caching\\FileCache',
       'keyPrefix' => 'humhub',
     ),
+    'formatter' => 
+    array (
+      'defaultTimeZone' => 'America/Chicago',
+    ),
   ),
   'params' => 
   array (
@@ -34,11 +38,12 @@
         'installer_database' => 'socialnet',
       ),
     ),
-    'config_created_at' => 1634943506,
+    'config_created_at' => 1634962701,
     'horImageScrollOnMobile' => '1',
     'databaseInstalled' => true,
     'installed' => true,
   ),
   'name' => 'Social Dilema',
   'language' => 'en-US',
+  'timeZone' => 'America/Chicago',
 ); ?>

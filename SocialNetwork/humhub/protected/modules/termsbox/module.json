@@ -1,0 +1,10 @@
+{
+    "id": "termsbox",
+    "name": "Terms Box",
+    "description": "Forces users to accept/decline the terms and conditions of your site.",
+    "keywords": ["terms", "conditions", "box", "modal"],
+    "version": "1.1.0",
+    "humhub": {
+        "minVersion": "1.8"
+    }
+}

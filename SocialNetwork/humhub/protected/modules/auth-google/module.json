@@ -1,0 +1,12 @@
+{
+    "id": "auth-google",
+    "name": "Google Sign-In",
+    "description": "Integrating Google Sign-In (OAuth 2.0).",
+    "keywords": [
+    ],
+    "version": "1.0.0",
+    "homepage": "https://github.com/humhub-contrib/auth-google",
+    "humhub": {
+        "minVersion": "1.6"
+    }
+}
