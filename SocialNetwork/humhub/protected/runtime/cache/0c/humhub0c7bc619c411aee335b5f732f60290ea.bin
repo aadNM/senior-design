@@ -1,4 +1,4 @@
-a:2:{i:0;s:866:"
+a:2:{i:0;s:1384:"
 
 <a href="/index.php?r=activity%2Flink&id=4">
 
@@ -6,11 +6,12 @@ a:2:{i:0;s:866:"
                     <!-- Show user image -->
             <span class="pull-left"><img class="media-object img-rounded" src="/uploads/profile_image/7426ef42-b700-48d3-95df-7d8c1b611d21.jpg?m=1634943504" width="32" alt="Profile picture of Sara Schuster" style="width: 32px; height: 32px" data-contentcontainer-id="4"></span>        
         <!-- Show space image, if you are outside from a space -->
+                                    <div class="img-space pull-left space-profile-acronym-1 space-acronym" style=" background-color: #6fdbe8; width: 20px; height: 20px; font-size: 8.8px; padding: 3.6px 0; border-radius: 2px;" data-contentcontainer-id="2">WS</div><img class="img-space pull-left space-profile-image-1 img-rounded profile-user-photo hidden" src="/static/img/default_space.jpg" alt="Welcome Space" style=" width: 20px; height: 20px" data-contentcontainer-id="2">            
         
         <div class="media-body text-break">
 
             <!-- Show content -->
-            <strong>Sara Schuster</strong> joined this space.            <br>
+            <strong>Sara Schuster</strong> joined the space <strong>Welcome Space</strong>            <br>
 
             <!-- show time -->
             <time class="tt time timeago" data-ui-addition="timeago" datetime="2021-10-22T22:58:24-05:00" title="Oct 23, 2021 - 3:58 AM">Oct 23, 2021 - 3:58 AM</time>        </div>
