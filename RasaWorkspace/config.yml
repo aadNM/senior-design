@@ -32,3 +32,4 @@ policies:
   - name: "TEDPolicy"
     epochs: 200
     constrain_similarities: true
+  - name: "RulePolicy"

@@ -12,3 +12,16 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
+- rule: State ambivalence when intent of suicide
+  steps:
+  - intent: suicide
+  - action: utter_ambivalence
+  - intent: willing_for_safety
+  - action: utter_coping_mechanisms
+
+- rule: Ask to stay away when intent of selfharm
+  steps:
+  - intent: self_harm
+  - action: utter_stay_away
+  - intent: agree
+  - action: utter_short_term_safety
