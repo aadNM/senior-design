@@ -43,7 +43,7 @@
     'databaseInstalled' => true,
     'installed' => true,
   ),
-  'name' => 'Social Dilema',
+  'name' => 'Spoonies',
   'language' => 'en-US',
   'timeZone' => 'America/Chicago',
 ); ?>
