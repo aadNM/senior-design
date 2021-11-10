@@ -98,3 +98,351 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1634962597.6437
     'REQUEST_TIME' => 1634962597
 ]
+2021-11-05 22:27:30 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=loca...', 'socialnet', 'ku-design', NULL)
+#1 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Query.php(157): yii\db\Connection->getQueryBuilder()
+#13 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Query.php(302): yii\db\Query->createCommand(Object(yii\db\Connection))
+#14 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/DbSession.php(190): yii\db\Query->scalar(Object(yii\db\Connection))
+#15 [internal function]: yii\web\DbSession->readSession('h9f329j420as93g...')
+#16 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/Session.php(152): session_start()
+#17 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/Session.php(712): yii\web\Session->open()
+#18 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/User.php(416): yii\web\Session->set('__returnUrl', 'http://localhos...')
+#19 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/User.php(448): yii\web\User->setReturnUrl('http://localhos...')
+#20 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/modules/user/components/User.php(262): yii\web\User->loginRequired(true, true)
+#21 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/components/behaviors/AccessControl.php(225): humhub\modules\user\components\User->loginRequired()
+#22 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/components/behaviors/AccessControl.php(156): humhub\components\behaviors\AccessControl->loginRequired()
+#23 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/ActionFilter.php(77): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#24 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#25 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Component.php(628): call_user_func(Array, Object(yii\base\ActionEvent))
+#26 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(300): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#27 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/Controller.php(207): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#28 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/components/Controller.php(191): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#29 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(179): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#30 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#31 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('dashboard/dashb...', Array)
+#32 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#33 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/index.php(25): yii\base\Application->run()
+#34 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#1 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#9 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#10 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Query.php(157): yii\db\Connection->getQueryBuilder()
+#11 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Query.php(302): yii\db\Query->createCommand(Object(yii\db\Connection))
+#12 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/DbSession.php(190): yii\db\Query->scalar(Object(yii\db\Connection))
+#13 [internal function]: yii\web\DbSession->readSession('h9f329j420as93g...')
+#14 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/Session.php(152): session_start()
+#15 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/Session.php(712): yii\web\Session->open()
+#16 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/User.php(416): yii\web\Session->set('__returnUrl', 'http://localhos...')
+#17 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/User.php(448): yii\web\User->setReturnUrl('http://localhos...')
+#18 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/modules/user/components/User.php(262): yii\web\User->loginRequired(true, true)
+#19 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/components/behaviors/AccessControl.php(225): humhub\modules\user\components\User->loginRequired()
+#20 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/components/behaviors/AccessControl.php(156): humhub\components\behaviors\AccessControl->loginRequired()
+#21 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/ActionFilter.php(77): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#22 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#23 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Component.php(628): call_user_func(Array, Object(yii\base\ActionEvent))
+#24 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(300): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#25 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/Controller.php(207): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#26 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/components/Controller.php(191): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#27 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(179): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#28 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#29 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('dashboard/dashb...', Array)
+#30 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#31 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/index.php(25): yii\base\Application->run()
+#32 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2021-11-05 22:27:30 [::1][-][-][info][application] $_GET = [
+    'r' => 'dashboard/dashboard'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15'
+    'HTTP_REFERER' => 'http://localhost/index.php?r=web%2Fpwa-service-worker%2Findex&v=1634868049'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Unix) PHP/8.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub'
+    'SERVER_ADMIN' => 'aad21nm@gmail.com'
+    'SCRIPT_FILENAME' => '/Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/index.php'
+    'REMOTE_PORT' => '49434'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=dashboard%2Fdashboard'
+    'REQUEST_URI' => '/index.php?r=dashboard%2Fdashboard'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636169249.9036
+    'REQUEST_TIME' => 1636169249
+]
+2021-11-05 22:27:30 [::1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\DbTarget: Exception (Database Exception) 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No such file or directory' 
+
+in /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php:642
+
+Stack trace:
+#0 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#1 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Schema.php(463): yii\db\Connection->getSlavePdo()
+#3 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(909): yii\db\Schema->quoteValue('yii\\db\\Exceptio...')
+#4 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Command.php(211): yii\db\Connection->quoteValue('yii\\db\\Exceptio...')
+#5 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Command.php(1123): yii\db\Command->getRawSql()
+#6 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Command.php(1088): yii\db\Command->logQuery('yii\\db\\Command:...')
+#7 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/log/DbTarget.php(93): yii\db\Command->execute()
+#8 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/log/Target.php(158): yii\log\DbTarget->export()
+#9 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/log/Dispatcher.php(191): yii\log\Target->collect(Array, true)
+#10 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#11 [internal function]: yii\log\Logger->flush(true)
+#12 {main}
+2021-11-05 22:27:30 [::1][-][-][info][application] $_GET = [
+    'r' => 'dashboard/dashboard'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15'
+    'HTTP_REFERER' => 'http://localhost/index.php?r=web%2Fpwa-service-worker%2Findex&v=1634868049'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Unix) PHP/8.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub'
+    'SERVER_ADMIN' => 'aad21nm@gmail.com'
+    'SCRIPT_FILENAME' => '/Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/index.php'
+    'REMOTE_PORT' => '49434'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=dashboard%2Fdashboard'
+    'REQUEST_URI' => '/index.php?r=dashboard%2Fdashboard'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636169249.9036
+    'REQUEST_TIME' => 1636169249
+]
+2021-11-05 22:27:31 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=loca...', 'socialnet', 'ku-design', NULL)
+#1 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Query.php(157): yii\db\Connection->getQueryBuilder()
+#13 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Query.php(302): yii\db\Query->createCommand(Object(yii\db\Connection))
+#14 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/DbSession.php(190): yii\db\Query->scalar(Object(yii\db\Connection))
+#15 [internal function]: yii\web\DbSession->readSession('ov4tptbnj8lmcrl...')
+#16 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/Session.php(152): session_start()
+#17 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/Session.php(700): yii\web\Session->open()
+#18 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/User.php(685): yii\web\Session->get('__id')
+#19 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/User.php(194): yii\web\User->renewAuthStatus()
+#20 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/User.php(362): yii\web\User->getIdentity()
+#21 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#22 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/components/i18n/I18N.php(53): yii\base\Component->__get('isGuest')
+#23 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/components/bootstrap/LanguageSelector.php(29): humhub\components\i18n\I18N->autosetLocale()
+#24 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Application.php(333): humhub\components\bootstrap\LanguageSelector->bootstrap(Object(humhub\components\Application))
+#25 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/Application.php(70): yii\base\Application->bootstrap()
+#26 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/components/Application.php(57): yii\web\Application->bootstrap()
+#27 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Application.php(279): humhub\components\Application->bootstrap()
+#28 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#29 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Application.php(212): yii\base\BaseObject->__construct(Array)
+#30 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/components/Application.php(39): yii\base\Application->__construct(Array)
+#31 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/index.php(25): humhub\components\Application->__construct(Array)
+#32 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#1 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#9 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#10 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Query.php(157): yii\db\Connection->getQueryBuilder()
+#11 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Query.php(302): yii\db\Query->createCommand(Object(yii\db\Connection))
+#12 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/DbSession.php(190): yii\db\Query->scalar(Object(yii\db\Connection))
+#13 [internal function]: yii\web\DbSession->readSession('ov4tptbnj8lmcrl...')
+#14 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/Session.php(152): session_start()
+#15 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/Session.php(700): yii\web\Session->open()
+#16 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/User.php(685): yii\web\Session->get('__id')
+#17 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/User.php(194): yii\web\User->renewAuthStatus()
+#18 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/User.php(362): yii\web\User->getIdentity()
+#19 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#20 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/components/i18n/I18N.php(53): yii\base\Component->__get('isGuest')
+#21 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/components/bootstrap/LanguageSelector.php(29): humhub\components\i18n\I18N->autosetLocale()
+#22 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Application.php(333): humhub\components\bootstrap\LanguageSelector->bootstrap(Object(humhub\components\Application))
+#23 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/web/Application.php(70): yii\base\Application->bootstrap()
+#24 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/components/Application.php(57): yii\web\Application->bootstrap()
+#25 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Application.php(279): humhub\components\Application->bootstrap()
+#26 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#27 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/base/Application.php(212): yii\base\BaseObject->__construct(Array)
+#28 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/humhub/components/Application.php(39): yii\base\Application->__construct(Array)
+#29 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/index.php(25): humhub\components\Application->__construct(Array)
+#30 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2021-11-05 22:27:31 [::1][-][-][info][application] $_GET = [
+    'r' => 'web/pwa-service-worker/index'
+    'v' => '1634868049'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=ov4tptbnj8lmcrl9e0f8p7436t; _identity=abb5b0c7949b24b75b867f97428f58f994c72780ae288c97b6efd0cb5d6b8fc0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d68bba96-0a48-4137-9ba7-cbcf5f9fc357%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => ''
+    'HTTP_SERVICE_WORKER' => 'script'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Unix) PHP/8.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub'
+    'SERVER_ADMIN' => 'aad21nm@gmail.com'
+    'SCRIPT_FILENAME' => '/Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/index.php'
+    'REMOTE_PORT' => '49435'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=web%2Fpwa-service-worker%2Findex&v=1634868049'
+    'REQUEST_URI' => '/index.php?r=web%2Fpwa-service-worker%2Findex&v=1634868049'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636169251.5731
+    'REQUEST_TIME' => 1636169251
+]
+2021-11-05 22:27:31 [::1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\DbTarget: Exception (Database Exception) 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No such file or directory' 
+
+in /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php:642
+
+Stack trace:
+#0 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#1 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Schema.php(463): yii\db\Connection->getSlavePdo()
+#3 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Connection.php(909): yii\db\Schema->quoteValue('yii\\db\\Exceptio...')
+#4 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Command.php(211): yii\db\Connection->quoteValue('yii\\db\\Exceptio...')
+#5 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Command.php(1123): yii\db\Command->getRawSql()
+#6 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/db/Command.php(1088): yii\db\Command->logQuery('yii\\db\\Command:...')
+#7 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/log/DbTarget.php(93): yii\db\Command->execute()
+#8 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/log/Target.php(158): yii\log\DbTarget->export()
+#9 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/log/Dispatcher.php(191): yii\log\Target->collect(Array, true)
+#10 /Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/protected/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#11 [internal function]: yii\log\Logger->flush(true)
+#12 {main}
+2021-11-05 22:27:31 [::1][-][-][info][application] $_GET = [
+    'r' => 'web/pwa-service-worker/index'
+    'v' => '1634868049'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=ov4tptbnj8lmcrl9e0f8p7436t; _identity=abb5b0c7949b24b75b867f97428f58f994c72780ae288c97b6efd0cb5d6b8fc0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d68bba96-0a48-4137-9ba7-cbcf5f9fc357%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => ''
+    'HTTP_SERVICE_WORKER' => 'script'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Unix) PHP/8.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub'
+    'SERVER_ADMIN' => 'aad21nm@gmail.com'
+    'SCRIPT_FILENAME' => '/Users/azizdiallo/OneDrive - University of Kansas/School/Fall2021/581-Design 1/project/senior-design/SocialNetwork/humhub/index.php'
+    'REMOTE_PORT' => '49435'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=web%2Fpwa-service-worker%2Findex&v=1634868049'
+    'REQUEST_URI' => '/index.php?r=web%2Fpwa-service-worker%2Findex&v=1634868049'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636169251.5731
+    'REQUEST_TIME' => 1636169251
+]
