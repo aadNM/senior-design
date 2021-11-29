@@ -38,7 +38,7 @@
         'installer_database' => 'socialnet',
       ),
     ),
-    'config_created_at' => 1637620019,
+    'config_created_at' => 1638228014,
     'horImageScrollOnMobile' => '1',
     'databaseInstalled' => true,
     'installed' => true,
