@@ -225,6 +225,7 @@ nlu:
     - [firghtened](mood_type)
     - [anxious](mood_type)
     - I am [not okay](mood_type)
+    - Now you see me
 - intent: bot_challenge
   examples: |
     - are you a bot?
