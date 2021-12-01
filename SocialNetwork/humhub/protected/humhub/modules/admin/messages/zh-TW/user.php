@@ -25,6 +25,7 @@ return [
     'All open registration invitations were successfully deleted.' => '',
     'All the personal data of this user will be irrevocably deleted.' => '',
     'Allow' => '',
+    'Allow users to block each other' => '',
     'Allow users to set individual permissions for their own profile?' => '',
     'Allow visitors limited access to content without an account (Adds visibility: "Guest")' => '',
     'Applied to new or existing users without any other group membership.' => '',
@@ -48,7 +49,7 @@ return [
     'Default Sorting' => '',
     'Default content of the registration approval email' => '',
     'Default content of the registration denial email' => '',
-    'Default groups can not be deleted!' => '',
+    'Default group can not be deleted!' => '',
     'Default user idle timeout, auto-logout (in seconds, optional)' => '',
     'Default user profile visibility' => '',
     'Delete' => '',
@@ -75,18 +76,25 @@ return [
     'Group not found!' => '',
     'Group user not found!' => '',
     'Groups' => '',
-    'Hello {displayName},<br><br>
-Your account has been activated.<br><br>
-Click here to login:<br>
-{loginLink}<br><br>
+    'Hello {displayName},
 
-Kind Regards<br>
-{AdminName}<br><br>' => '',
-    'Hello {displayName},<br><br>
-Your account request has been declined.<br><br>
+Your account has been activated.
 
-Kind Regards<br>
-{AdminName} <br><br> ' => '',
+Click here to login:
+{loginUrl}
+
+Kind Regards
+{AdminName}
+
+' => '',
+    'Hello {displayName},
+
+Your account request has been declined.
+
+Kind Regards
+{AdminName}
+
+' => '',
     'Here you can create or edit profile categories and fields.' => '',
     'If individual profile permissions are not allowed, the following settings are unchangeable for all users. If individual profile permissions are allowed, the settings are only set as defaults that users can customise. The following entries are then displayed in the same form in the users profile settings:' => '',
     'If this option is not selected, the ownership of the spaces will be transferred to your account.' => '',
@@ -125,6 +133,8 @@ Kind Regards<br>
     'Prioritised User Group' => '',
     'Profile Permissions' => '',
     'Profiles' => '',
+    'Protected' => '',
+    'Protected group can not be deleted!' => '',
     'Remove from group' => '',
     'Require group admin approval after registration' => '',
     'Resend invitation email' => '',
@@ -132,6 +142,7 @@ Kind Regards<br>
     'Select Groups' => '',
     'Select a prioritised group whose members are displayed before all others when the sorting option \'Default\' is selected. The users within the group and the users outside the group are additionally sorted by their last login.' => '',
     'Select which user information should be displayed in the \'People\' overview. You can select any profile fields, even those you have created individually. ' => '',
+    'Send & decline' => '',
     'Send & save' => '',
     'Send invitation email' => '',
     'Send invitation email again?' => '',

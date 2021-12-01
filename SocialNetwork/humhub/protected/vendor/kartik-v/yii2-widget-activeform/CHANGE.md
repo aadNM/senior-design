@@ -1,6 +1,19 @@
 Change Log: `yii2-widget-activeform`
 ====================================
 
+## Version 1.6.0
+
+**Date**: 01-Sep-2021
+
+- (enh #128): Enhancements to support Bootstrap v5.x. 
+
+## Version 1.5.9
+
+**Date**: 01-Sep-2021
+
+- (enh #121): Fixed type hinting error. 
+- (enh #120): BS4 Custom Controls Enhancements: Switch and File.
+
 ## Version 1.5.8
 
 **Date**: 24-Feb-2019

@@ -9,10 +9,21 @@
  *
  * NOTE: this file must be saved in UTF-8 encoding.
  */
-(function ($) {
+(function (factory) {
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else if (typeof module === 'object' && typeof module.exports === 'object') {
+        factory(require('jquery'));
+    } else {
+        factory(window.jQuery);
+    }
+}(function ($) {
     "use strict";
 
     $.fn.fileinputLocales['id'] = {
+        sizeUnits: ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'], 
+        bitRateUnits: ['B/s', 'KB/s', 'MB/s', 'GB/s', 'TB/s', 'PB/s', 'EB/s', 'ZB/s', 'YB/s'],
         fileSingle: 'berkas',
         filePlural: 'berkas',
         browseLabel: 'Pilih berkas &hellip;',
@@ -67,6 +78,7 @@
         msgLoading: 'Memuat {index} dari {files} berkas &hellip;',
         msgProgress: 'Memuat {index} dari {files} berkas - {name} - {percent}% selesai.',
         msgSelected: '{n} {files} dipilih',
+        msgProcessing: 'Processing ...',
         msgFoldersNotAllowed: 'Hanya tahan dan lepas file saja! {n} folder diabaikan.',
         msgImageWidthSmall: 'Lebar dari gambar "{name}" harus sekurangnya {size} px.',
         msgImageHeightSmall: 'Tinggi dari gambar "{name}" harus sekurangnya {size} px.',
@@ -110,4 +122,4 @@
             close: 'Tutup pratinjau terperinci'
         }
     };
-})(window.jQuery);
+}));

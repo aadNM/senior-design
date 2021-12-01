@@ -9,10 +9,21 @@
  *
  * NOTE: this file must be saved in UTF-8 encoding.
  */
-(function ($) {
+(function (factory) {
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else if (typeof module === 'object' && typeof module.exports === 'object') {
+        factory(require('jquery'));
+    } else {
+        factory(window.jQuery);
+    }
+}(function ($) {
     "use strict";
 
     $.fn.fileinputLocales['uk'] = {
+        sizeUnits: ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'], 
+        bitRateUnits: ['B/s', 'KB/s', 'MB/s', 'GB/s', 'TB/s', 'PB/s', 'EB/s', 'ZB/s', 'YB/s'],
         fileSingle: 'файл',
         filePlural: 'файли',
         browseLabel: 'Обрати &hellip;',
@@ -67,6 +78,7 @@
         msgLoading: 'Відвантаження файла {index} із {files} &hellip;',
         msgProgress: 'Відвантаження файла {index} із {files} - {name} - {percent}% завершено.',
         msgSelected: '{n} {files} обрано',
+        msgProcessing: 'Processing ...',
         msgFoldersNotAllowed: 'Дозволено перетягувати тільки файли! Пропущено {n} тек.',
         msgImageWidthSmall: 'Ширина зображення "{name}" повинна бути не менше {size} px.',
         msgImageHeightSmall: 'Висота зображення "{name}" повинна бути не менше {size} px.',
@@ -110,4 +122,4 @@
             close: 'Закрити детальний перегляд'
         }
     };
-})(window.jQuery);
+}));

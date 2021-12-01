@@ -1,5 +1,5 @@
 /*!
- * bootstrap-fileinput v5.2.1
+ * bootstrap-fileinput v5.2.6
  * http://plugins.krajee.com/file-input
  *
  * Glyphicon (default) theme configuration for bootstrap-fileinput.
@@ -10,7 +10,16 @@
  * Licensed under the BSD-3-Clause
  * https://github.com/kartik-v/bootstrap-fileinput/blob/master/LICENSE.md
  */
-(function ($) {
+(function (factory) {
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'],factory);
+    } else if (typeof module === 'object' && typeof module.exports === 'object') {
+        factory(require('jquery'));
+    } else {
+        factory(window.jQuery);
+    }
+}(function ($) {
     "use strict";
 
     $.fn.fileinputThemes.gly = {
@@ -28,8 +37,8 @@
             fileIcon: '<i class="glyphicon glyphicon-file kv-caption-icon"></i>'
         },
         previewZoomButtonIcons: {
-            prev: '<i class="glyphicon glyphicon-triangle-left"></i>',
-            next: '<i class="glyphicon glyphicon-triangle-right"></i>',
+            prev: '<i class="glyphicon glyphicon-menu-left"></i>',
+            next: '<i class="glyphicon glyphicon-menu-right"></i>',
             toggleheader: '<i class="glyphicon glyphicon-resize-vertical"></i>',
             fullscreen: '<i class="glyphicon glyphicon-fullscreen"></i>',
             borderless: '<i class="glyphicon glyphicon-resize-full"></i>',
@@ -43,4 +52,4 @@
         uploadIcon: '<i class="glyphicon glyphicon-upload"></i>',
         msgValidationErrorIcon: '<i class="glyphicon glyphicon-exclamation-sign"></i> '
     };
-})(window.jQuery);
+}));

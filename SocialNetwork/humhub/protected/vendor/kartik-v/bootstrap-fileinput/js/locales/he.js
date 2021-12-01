@@ -9,10 +9,21 @@
  *
  * NOTE: this file must be saved in UTF-8 encoding.
  */
-(function ($) {
+(function (factory) {
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else if (typeof module === 'object' && typeof module.exports === 'object') {
+        factory(require('jquery'));
+    } else {
+        factory(window.jQuery);
+    }
+}(function ($) {
     "use strict";
 
     $.fn.fileinputLocales['he'] = {
+        sizeUnits: ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'], 
+        bitRateUnits: ['B/s', 'KB/s', 'MB/s', 'GB/s', 'TB/s', 'PB/s', 'EB/s', 'ZB/s', 'YB/s'],
         fileSingle: 'קובץ',
         filePlural: 'קבצים',
         browseLabel: 'העלאה &hellip;',
@@ -63,6 +74,7 @@
         msgLoading: 'טוען קובץ {index} של {files} &hellip;',
         msgProgress: 'טוען קובץ {index} של {files} - {name} - {percent}% הושלמה.',
         msgSelected: '{n} {files} נבחרו',
+        msgProcessing: 'Processing ...',
         msgFoldersNotAllowed: 'גרירת קבצים ושחרורם בלבד! דילוג {n} גרירת תיקיה(s).',
         msgImageWidthSmall: 'רוחב קובץ התמונה "{name}" חייב להיות לפחות {size} px.',
         msgImageHeightSmall: 'גובה קובץ התמונה "{name}" חייב להיות לפחות {size} px.',
@@ -104,4 +116,4 @@
             close: 'סגירת תצוגה מקדימה מפורטת'
         }
     };
-})(window.jQuery);
+}));

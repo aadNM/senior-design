@@ -29,6 +29,7 @@ return [
     'Application message' => '',
     'Archived' => '',
     'As owner you cannot revoke your membership!' => '',
+    'Blocked users' => '',
     'By Name' => '',
     'Cancel' => '',
     'Close' => '',
@@ -62,7 +63,6 @@ return [
     'Join' => '',
     'Join Policy' => '',
     'Last Visit' => '',
-    'Load more' => '',
     'Login' => '',
     'Max. 100 characters.' => '',
     'Member' => '',
@@ -144,6 +144,5 @@ return [
     'Your request was successfully submitted to the space administrators.' => '',
     'Your request was successfully submitted to the workspace administrators.' => '',
     '{count} members' => '',
-    '{email} is already registered!' => '',
     '{email} is not valid!' => '',
 ];

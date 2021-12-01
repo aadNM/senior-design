@@ -26,6 +26,7 @@ return array (
   'Application message' => 'Anwendungsmeldung',
   'Archived' => 'Archiviert',
   'As owner you cannot revoke your membership!' => 'Als Eigentümer des Spaces kannst du deine Mitgliedschaft nicht beenden!',
+  'Blocked users' => 'Blockierte Benutzer',
   'By Name' => 'Alphabetisch',
   'Cancel' => 'Abbrechen',
   'Close' => 'Schließen',
@@ -59,7 +60,6 @@ return array (
   'Join' => 'Beitreten',
   'Join Policy' => 'Beitritts-Richtlinie',
   'Last Visit' => 'Letzter Besuch',
-  'Load more' => 'Mehr laden',
   'Login' => 'Login',
   'Max. 100 characters.' => 'Max. 100 Zeichen.',
   'Member' => 'Mitglied',
@@ -143,6 +143,5 @@ return array (
   'Your request was successfully submitted to the space administrators.' => 'Deine Anfrage wurde erfolgreich an die Space-Administratoren weitergeleitet.',
   'Your request was successfully submitted to the workspace administrators.' => 'Deine Anfrage wurde erfolgreich an die Space-Administratoren weitergeleitet.',
   '{count} members' => '{count} Mitglieder',
-  '{email} is already registered!' => '{email} ist bereits registriert!',
   '{email} is not valid!' => '{email} ist ungültig!',
 );

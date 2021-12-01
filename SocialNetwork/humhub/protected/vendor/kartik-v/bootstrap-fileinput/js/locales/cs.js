@@ -8,10 +8,21 @@
  *
  * NOTE: this file must be saved in UTF-8 encoding.
  */
-(function ($) {
+(function (factory) {
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else if (typeof module === 'object' && typeof module.exports === 'object') {
+        factory(require('jquery'));
+    } else {
+        factory(window.jQuery);
+    }
+}(function ($) {
     "use strict";
 
     $.fn.fileinputLocales['cs'] = {
+        sizeUnits: ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'], 
+        bitRateUnits: ['B/s', 'KB/s', 'MB/s', 'GB/s', 'TB/s', 'PB/s', 'EB/s', 'ZB/s', 'YB/s'],
         fileSingle: 'soubor',
         filePlural: 'soubory',
         browseLabel: 'Vybrat &hellip;',
@@ -66,6 +77,7 @@
         msgLoading: 'Nahrávání souboru {index} z {files} &hellip;',
         msgProgress: 'Nahrávání souboru {index} z {files} - {name} - {percent}% dokončeno.',
         msgSelected: '{n} {files} vybráno',
+        msgProcessing: 'Zpracovávám ...',
         msgFoldersNotAllowed: 'Táhni a pusť pouze soubory! Vynechané {n} pustěné složk(y).',
         msgImageWidthSmall: 'Šířka obrázku "{name}", musí být alespoň {size} px.',
         msgImageHeightSmall: 'Výška obrázku "{name}", musí být alespoň {size} px.',
@@ -109,4 +121,4 @@
             close: 'Zavřít detailní náhled'
         }
     };
-})(window.jQuery);
+}));

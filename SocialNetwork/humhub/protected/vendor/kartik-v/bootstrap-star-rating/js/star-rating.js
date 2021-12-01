@@ -1,5 +1,5 @@
 /*!
- * bootstrap-star-rating v4.0.9
+ * bootstrap-star-rating v4.1.2
  * http://plugins.krajee.com/star-rating
  *
  * Author: Kartik Visweswaran
@@ -10,19 +10,12 @@
  */
 (function (factory) {
     'use strict';
-    //noinspection JSUnresolvedVariable
-    if (typeof define === 'function' && define.amd) { // jshint ignore:line
-        // AMD. Register as an anonymous module.
-        define(['jquery'], factory); // jshint ignore:line
-    } else { // noinspection JSUnresolvedVariable
-        if (typeof module === 'object' && module.exports) { // jshint ignore:line
-            // Node/CommonJS
-            // noinspection JSUnresolvedVariable
-            module.exports = factory(require('jquery')); // jshint ignore:line
-        } else {
-            // Browser globals
-            factory(window.jQuery);
-        }
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else if (typeof module === 'object' && typeof module.exports === 'object') {
+        factory(require('jquery'));
+    } else {
+        factory(window.jQuery);
     }
 }(function ($) {
     'use strict';
@@ -32,7 +25,7 @@
 
     var $h, Rating;
 
-    // global helper methods and constants
+    // Global helper methods and constants
     $h = {
         NAMESPACE: '.rating',
         DEFAULT_MIN: 0,
@@ -66,12 +59,14 @@
         }
     };
 
-    // rating constructor
+    // Rating constructor
     Rating = function (element, options) {
         var self = this;
         self.$element = $(element);
         self._init(options);
     };
+
+    // Rating prototype
     Rating.prototype = {
         constructor: Rating,
         _parseAttr: function (vattr, options) {
@@ -423,13 +418,13 @@
                         return;
                     }
                     var $el = self.$element, v = $el.val(), isUpdated = false, step = parseFloat(self.step),
-                        precision = $h.getDecimalPlaces(self.step),
+                        precision = $h.getDecimalPlaces(step), upKey = self.rtl ? 37 : 39, dnKey = self.rtl ? 39 : 37,
                         val = v ? parseFloat(v) : 0, key = parseInt(e.which || e.keyCode || 0, 10);
-                    if (key === 39 && val < self.max) { // key right (increase)
+                    if (key === upKey && val < self.max) { // key right (increase)
                         val += step;
                         isUpdated = true;
                     }
-                    if (key === 37 && val > self.minThreshold) { // key left (decrease)
+                    if (key === dnKey && val > self.minThreshold) { // key left (decrease)
                         val -= step;
                         isUpdated = true
                     }
@@ -450,7 +445,7 @@
         _listen: function () {
             var self = this, $el = self.$element, $form = $el.closest('form'), $rating = self.$rating,
                 $clear = self.$clear, events = self.events, ns = $h.NAMESPACE,
-                mouseEvents = 'mousenter' + ns + ' mouseleave' + ns, $stars = self.$rating.find('.star');
+                mouseEvents = 'mouseenter' + ns + ' mouseleave' + ns, $stars = self.$rating.find('.star');
             $h.handler($rating, 'touchstart touchmove touchend', events.initTouch);
             $h.handler($rating, 'click touchstart', events.starClick);
             $h.handler($rating, 'mousemove', events.starMouseMove);
@@ -632,14 +627,12 @@
     };
 
     $.fn.rating.defaults = {
-        theme: '',
+        theme: 'krajee-svg',
         language: 'en',
         stars: 5,
         tabindex: 0,
         keyboardEnabled: true,
         mouseEnabled: true,
-        filledStar: '<i class="glyphicon glyphicon-star"></i>',
-        emptyStar: '<i class="glyphicon glyphicon-star-empty"></i>',
         containerClass: '',
         size: 'md',
         animate: true,
@@ -659,7 +652,9 @@
             4.5: 'caption-badge caption-success',
             5: 'caption-badge caption-success'
         },
-        clearButton: '<i class="glyphicon glyphicon-minus-sign"></i>',
+        filledStar: '<span class="krajee-icon krajee-icon-star"></span>', // krajee-svg theme
+        emptyStar: '<span class="krajee-icon krajee-icon-star"></span>',  // krajee-svg theme
+        clearButton: '<span class="krajee-icon-clear"></span>',           // krajee-svg theme
         clearButtonBaseClass: 'clear-rating',
         clearButtonActiveClass: 'clear-rating-active',
         clearCaptionClass: 'caption-badge caption-secondary',

@@ -9,10 +9,21 @@
  *
  * NOTE: this file must be saved in UTF-8 encoding.
  */
-(function ($) {
+(function (factory) {
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else if (typeof module === 'object' && typeof module.exports === 'object') {
+        factory(require('jquery'));
+    } else {
+        factory(window.jQuery);
+    }
+}(function ($) {
     "use strict";
 
     $.fn.fileinputLocales['ru'] = {
+        sizeUnits: ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'], 
+        bitRateUnits: ['B/s', 'KB/s', 'MB/s', 'GB/s', 'TB/s', 'PB/s', 'EB/s', 'ZB/s', 'YB/s'],
         fileSingle: 'файл',
         filePlural: 'файлы',
         browseLabel: 'Выбрать &hellip;',
@@ -67,6 +78,7 @@
         msgLoading: 'Загрузка файла {index} из {files} &hellip;',
         msgProgress: 'Загрузка файла {index} из {files} - {name} - {percent}% завершено.',
         msgSelected: 'Выбрано файлов: {n}',
+        msgProcessing: 'Processing ...',
         msgFoldersNotAllowed: 'Разрешено перетаскивание только файлов! Пропущено {n} папок.',
         msgImageWidthSmall: 'Ширина изображения {name} должна быть не меньше {size} px.',
         msgImageHeightSmall: 'Высота изображения {name} должна быть не меньше {size} px.',
@@ -110,4 +122,4 @@
             close: 'Закрыть подробный предпросмотр'
         }
     };
-})(window.jQuery);
+}));

@@ -26,6 +26,7 @@ return array (
   'Application message' => 'Applicatie melding',
   'Archived' => 'Gearchiveerd',
   'As owner you cannot revoke your membership!' => 'Als eigenaar kunt u uw lidmaatschap niet intrekken!',
+  'Blocked users' => 'Geblokkeerde gebruikers',
   'By Name' => 'Bij naam',
   'Cancel' => 'Annuleren',
   'Close' => 'Sluiten',
@@ -59,7 +60,6 @@ return array (
   'Join' => 'Doe mee',
   'Join Policy' => 'Gedragslijn om lid te worden',
   'Last Visit' => 'Laatste bezoek',
-  'Load more' => 'Meer laden',
   'Login' => 'Log in',
   'Max. 100 characters.' => 'Maximaal 100 tekens',
   'Member' => 'Lid',
@@ -143,6 +143,5 @@ return array (
   'Your request was successfully submitted to the space administrators.' => 'Uw aanvraag is succesvol naar de ruimte-beheerder verstuurd.',
   'Your request was successfully submitted to the workspace administrators.' => 'Je aanvraag werd succesvol verstuurd naar de ruimte-beheerder.',
   '{count} members' => '{count} leden',
-  '{email} is already registered!' => '{email} is reeds geregistreerd!',
   '{email} is not valid!' => '{email} is niet geldig!',
 );

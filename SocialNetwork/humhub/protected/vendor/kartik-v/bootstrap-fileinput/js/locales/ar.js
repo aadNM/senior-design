@@ -9,10 +9,21 @@
  *
  * NOTE: this file must be saved in UTF-8 encoding.
  */
-(function ($) {
+(function (factory) {
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else if (typeof module === 'object' && typeof module.exports === 'object') {
+        factory(require('jquery'));
+    } else {
+        factory(window.jQuery);
+    }
+}(function ($) {
     "use strict";
 
     $.fn.fileinputLocales['ar'] = {
+        sizeUnits: ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'], 
+        bitRateUnits: ['B/s', 'KB/s', 'MB/s', 'GB/s', 'TB/s', 'PB/s', 'EB/s', 'ZB/s', 'YB/s'],
         fileSingle: 'ملف',
         filePlural: 'ملفات',
         browseLabel: 'تصفح &hellip;',
@@ -67,6 +78,7 @@
         msgLoading: 'تحميل ملف {index} من {files} &hellip;',
         msgProgress: 'تحميل ملف {index} من {files} - {name} - {percent}% منتهي.',
         msgSelected: '{n} {files} مختار(ة)',
+        msgProcessing: 'Processing ...',
         msgFoldersNotAllowed: 'اسحب وأفلت الملفات فقط! تم تخطي {n} مجلد(ات).',
         msgImageWidthSmall: 'عرض ملف الصورة "{name}" يجب أن يكون على الأقل {size} px.',
         msgImageHeightSmall: 'طول ملف الصورة "{name}" يجب أن يكون على الأقل {size} px.',
@@ -110,4 +122,4 @@
             close: 'إغلاق المعاينة التفصيلية'
         }
     };
-})(window.jQuery);
+}));

@@ -21,7 +21,6 @@ return [
     'Following' => 'Seguindo',
     'Guests' => ' ',
     'Last Visit' => 'Zaguera visita',
-    'Load more' => 'Cargar mas',
     'Login' => 'Iniciar sesión',
     'Members' => 'Miembros',
     'My Space List' => 'A mía lista d\'espacios',
@@ -60,6 +59,7 @@ return [
     'Any' => '',
     'Application message' => '',
     'As owner you cannot revoke your membership!' => '',
+    'Blocked users' => '',
     'By Name' => '',
     'Color' => '',
     'Could not request membership!' => '',
@@ -144,6 +144,5 @@ return [
     'Your request was successfully submitted to the space administrators.' => '',
     'Your request was successfully submitted to the workspace administrators.' => '',
     '{count} members' => '',
-    '{email} is already registered!' => '',
     '{email} is not valid!' => '',
 ];

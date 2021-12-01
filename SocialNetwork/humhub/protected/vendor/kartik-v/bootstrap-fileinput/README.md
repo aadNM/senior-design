@@ -1,15 +1,17 @@
 <h1 align="center">
     <a href="http://plugins.krajee.com" title="Krajee Plugins" target="_blank">
-        <img src="http://kartik-v.github.io/bootstrap-fileinput-samples/samples/krajee-logo-b.png" alt="Krajee Logo"/>
+        <img src="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/krajee-logo-b.png" alt="Krajee Logo"/>
     </a>
     <br>
     bootstrap-fileinput
     <hr>
     <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DTP3NZQ6G2AYU"
-       title="Donate via Paypal" target="_blank">
-        <img src="http://kartik-v.github.io/bootstrap-fileinput-samples/samples/donate.png" alt="Donate"/>
-    </a>
+       title="Donate via Paypal" target="_blank"><img height="60" src="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/donate.png" alt="Donate"/></a>
+    &nbsp; &nbsp; &nbsp;
+    <a href="https://www.buymeacoffee.com/kartikv" title="Buy me a coffee" ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="60" alt="kartikv" /></a>
 </h1>
+
+<div align="center">
 
 [![Financial Contributors on Open Collective](https://opencollective.com/bootstrap-fileinput/all/badge.svg?label=financial+contributors)](https://opencollective.com/bootstrap-fileinput)
 [![Bower version](https://badge.fury.io/bo/bootstrap-fileinput.svg)](http://badge.fury.io/bo/bootstrap-fileinput)
@@ -18,9 +20,11 @@
 [![Packagist Downloads](https://poser.pugx.org/kartik-v/bootstrap-fileinput/downloads)](https://packagist.org/packages/kartik-v/bootstrap-fileinput)
 [![Monthly Downloads](https://poser.pugx.org/kartik-v/bootstrap-fileinput/d/monthly)](https://packagist.org/packages/kartik-v/bootstrap-fileinput)
 
+</div>
+
 An enhanced HTML 5 file input for Bootstrap 5.x, 4.x, and 3.x with file preview for various files, offers multiple selection, resumable chunk uploads, and more. The plugin allows you a simple way to setup an advanced file picker/upload control built to work specially with Bootstrap 5.x, 4.x, and 3.x CSS3 styles. It enhances the file input functionality further, by offering support to preview a wide variety of files i.e. images, text, html, video, audio, flash, and objects. In addition, it includes AJAX based uploads, dragging &amp; dropping files, viewing upload progress, and selectively previewing, adding, or deleting files. 
 
-> NEW: Bootstrap 5.x support is added from v5.2.0 (major release after v5.1.5) of the plugin. With v5.2.0, the plugin is able to automatically detect the bootstrap library version and deliver the relevant bootstrap specific functionality. Note that as of May 2021, for Bootstrap 5.x library, there [is a modal dialog initialization issue recorded](https://github.com/twbs/bootstrap/issues/33840#issuecomment-833462016). This may in some cases break BC - so the version to rollback to is v5.1.5. However one should be able use release v5.2.0 without glitches if the right bootstrap Javascript library is loaded. Also check the `$.fn.fileinputBsVersion` setting for advanced use cases to avoid Bootstrap version detection issues.
+> NEW: Bootstrap 5.x support is added from v5.2.0 (major release after v5.1.5) of the plugin. With v5.2.0, the plugin is able to automatically detect the bootstrap library version and deliver the relevant bootstrap specific functionality (if the bootstrap library JS file is loaded). Alternatively, check the `$.fn.fileinputBsVersion` setting for advanced use cases to avoid Bootstrap version detection issues.
 
 > NOTE: Version 5.x is a significant rewrite. With version 5.x, the plugin code has been revamped with enhanced file management, resumable chunk uploads support, and other new features. You can go through the various closed enhancements and features and documented for [Release 5.x milestone](https://github.com/kartik-v/bootstrap-fileinput/milestone/1?closed=1).   
 
@@ -36,13 +40,13 @@ View the [plugin documentation](http://plugins.krajee.com/file-input) and [plugi
 
 ## Pre-requisites  
 
-1. [Bootstrap 5.x, 4.x, or 3.x](http://getbootstrap.com/)
+1. [Bootstrap 5.x or 4.x, or 3.x](http://getbootstrap.com/)
 2. Latest [JQuery](http://jquery.com/)
 3. Most modern browsers supporting HTML5 (inputs and FileReader API) including CSS3 & JQuery. For Internet Explorer, one must use IE versions 10 and above. IE9 and below will work as a normal file input, and will not support multiple file selection or the HTML 5 FileReader API.
 4. With release 4.0, AJAX uploads are supported. AJAX uploads require that the browser support HTML5 FormData and XHR2 (XMLHttpRequest 2). Most modern browsers support FormData and XHR2. The plugin will automatically degrade to normal form based submission for browsers not supporting AJAX uploads
 
 > NOTE: 
-> - Bootstrap 5.x is supported in addition to Bootstrap 3.x since release v5.2.0. Refer the [CHANGE LOG](https://github.com/kartik-v/bootstrap-fileinput/blob/master/CHANGE.md) for details. 
+> - Bootstrap 5.x is supported in addition to Bootstrap 3.x and 4.x since release v5.2.0. Refer the [CHANGE LOG](https://github.com/kartik-v/bootstrap-fileinput/blob/master/CHANGE.md) for details. 
 > - Bootstrap 4.x is supported in addition to Bootstrap 3.x since release v4.4.4. Refer the [CHANGE LOG](https://github.com/kartik-v/bootstrap-fileinput/blob/master/CHANGE.md) for details. 
 > - You can use the [sass branch](https://github.com/kartik-v/bootstrap-fileinput/tree/sass) for installation using `bootstrap-sass` dependency.
 The [master branch](https://github.com/kartik-v/bootstrap-fileinput/tree/master) can be used for installation using plain `bootstrap` dependency.
@@ -76,39 +80,53 @@ You can also manually install the plugin easily to your project. Just download t
 
 ## Usage
 
-Step 1: Load the following assets in your header. 
+Step 1: Load the following assets on your page in the order mentioned. 
 
 ```html
-<!-- bootstrap 5.x and 4.x is supported. You can also use the bootstrap css 3.3.x versions -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-<link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.1/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+<!-- bootstrap 5.x or 4.x is supported. You can also use the bootstrap css 3.3.x versions -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+
+<!-- default icons used in the plugin are from Bootstrap 5.x icon library (which can be enabled by loading CSS below) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.min.css" crossorigin="anonymous">
+
+<!-- alternatively you can use the font awesome icon library if using with `fas` theme (or Bootstrap 4.x) by uncommenting below. -->
+<!-- link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous" -->
+
+<!-- the fileinput plugin styling CSS file -->
+<link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.6/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+
 <!-- if using RTL (Right-To-Left) orientation, load the RTL CSS file after fileinput.css by uncommenting below -->
-<!-- link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.1/css/fileinput-rtl.min.css" media="all" rel="stylesheet" type="text/css" /-->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<!-- piexif.min.js is needed for auto orienting image files OR when restoring exif data in resized images and when you 
+<!-- link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.6/css/fileinput-rtl.min.css" media="all" rel="stylesheet" type="text/css" /-->
+
+<!-- the jQuery Library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+
+<!-- piexif.min.js is needed for auto orienting image files OR when restoring exif data in resized images and when you
     wish to resize images before upload. This must be loaded before fileinput.min.js -->
-<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.1/js/plugins/piexif.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.6/js/plugins/piexif.min.js" type="text/javascript"></script>
+
 <!-- sortable.min.js is only needed if you wish to sort / rearrange files in initial preview. 
     This must be loaded before fileinput.min.js -->
-<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.1/js/plugins/sortable.min.js" type="text/javascript"></script>
-<!-- popper.min.js below is needed if you use bootstrap 4.x. You can also use the bootstrap js 
-   3.3.x versions without popper.min.js. -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<!-- bootstrap.min.js below is needed if you wish to zoom and preview file content in a detail modal
-    dialog. Bootstrap 5.x and 4.x is supported. You can also use the 3.3.x versions. -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" type="text/javascript"></script>
-<!-- the main fileinput plugin file -->
-<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.1/js/fileinput.min.js"></script>
-<!-- optionally if you need a theme like font awesome theme you can include it as mentioned below -->
-<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.1/themes/fa/theme.js"></script>
-<!-- optionally if you need translation for your language then include  locale file as mentioned below (replace LANG.js with your locale file) -->
-<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.1/js/locales/LANG.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.6/js/plugins/sortable.min.js" type="text/javascript"></script>
+
+<!-- bootstrap.bundle.min.js below is needed if you wish to zoom and preview file content in a detail modal
+    dialog. bootstrap 5.x or 4.x is supported. You can also use the bootstrap js 3.3.x versions. -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+<!-- the main fileinput plugin script JS file -->
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.6/js/fileinput.min.js"></script>
+
+<!-- following theme script is needed to use the Font Awesome 5.x theme (`fas`). Uncomment if needed. -->
+<!-- script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.6/themes/fas/theme.min.js"></script -->
+
+<!-- optionally if you need translation for your language then include the locale file as mentioned below (replace LANG.js with your language locale) -->
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.6/js/locales/LANG.js"></script>
 ```
 With v5.2.1, the plugin is able to automatically detect the bootstrap library version and deliver the relevant bootstrap specific functionality (if you have loaded the bootstrap.min.js before fileinput.min.js). In case of any issues - you can explicitly set the bootstrap version by setting the following variable before the plugin initialization script.
 
 ```js
 // set this before initializing the fileinput plugin
-$.fn.fileinputBsVersion = '3.3.7'; // for example if using bootstrap css 3.3.7 version
+$.fn.fileinputBsVersion = '3.4.1'; // for example if using bootstrap css 3.4.1 version
 ```
 
 If you noticed, you need to load the `jquery.min.js` and `bootstrap.min.css` in addition to the `fileinput.min.css` and `fileinput.min.js`. The theme file `themes/fa/theme.js` can be optionally included for the font awesome icons styling. The locale file `<lang>.js` can be optionally included for translating for your language if needed.
@@ -122,21 +140,30 @@ For ease of access, the sources for the above plugins are included in the `js/pl
 
 Step 2: Initialize the plugin on your page. For example,
 
-```js
-// initialize with defaults
-$("#input-id").fileinput();
+```html
+// HTML markup
+<input id="input-id" name="file-data" type="file">
 
-// with plugin options
-$("#input-id").fileinput({'showUpload':false, 'previewFileType':'any'});
+<script>
+$(document).ready(function() {
+    // initialize with defaults
+    $("#input-id").fileinput();
+
+    // with plugin options
+    $("#input-id").fileinput({'uploadUrl': '/path/to/your-upload-api', 'previewFileType': 'any'});
+});
+</script>
 ```
 
 The `#input-id` is the identifier for the input (e.g. `type = file`) on your page, which is hidden automatically by the plugin. 
 
-Alternatively, you can directly call the plugin options by setting data attributes to your input field.
+Alternatively, you can directly call the plugin options by setting data attributes to your input field. To auto initialize the plugin with just HTML markup - add the CSS class `file` to your file input markup element. 
 
 ```html
 <input id="input-id" type="file" class="file" data-preview-file-type="text" >
 ```
+
+**NOTE:** When initializing the plugin via javascript (as mentioned earlier), do not add the CSS class `file` to the input markup (else you would get an erronaeous / inconsistent output).
 
 ## Contributors
 

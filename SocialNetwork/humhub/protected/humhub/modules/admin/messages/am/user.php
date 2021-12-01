@@ -104,6 +104,7 @@ return [
     'Add new field' => '',
     'Administrator group could not be deleted!' => '',
     'All open registration invitations were successfully deleted.' => '',
+    'Allow users to block each other' => '',
     'Allow users to set individual permissions for their own profile?' => '',
     'Applied to new or existing users without any other group membership.' => '',
     'Are you really sure? Users who are not assigned to another group are automatically assigned to the default group.' => '',
@@ -114,7 +115,7 @@ return [
     'Deactivate individual profile permissions?' => '',
     'Default Profile Permissions' => '',
     'Default Sorting' => '',
-    'Default groups can not be deleted!' => '',
+    'Default group can not be deleted!' => '',
     'Delete All' => '',
     'Do not change placeholders like {displayName} if you want them to be automatically filled by the system. To reset the email content fields with the system default, leave them empty.' => '',
     'Edit category' => '',
@@ -123,18 +124,25 @@ return [
     'Edit user: {name}' => '',
     'Enable individual profile permissions' => '',
     'First name' => '',
-    'Hello {displayName},<br><br>
-Your account has been activated.<br><br>
-Click here to login:<br>
-{loginLink}<br><br>
+    'Hello {displayName},
 
-Kind Regards<br>
-{AdminName}<br><br>' => '',
-    'Hello {displayName},<br><br>
-Your account request has been declined.<br><br>
+Your account has been activated.
 
-Kind Regards<br>
-{AdminName} <br><br> ' => '',
+Click here to login:
+{loginUrl}
+
+Kind Regards
+{AdminName}
+
+' => '',
+    'Hello {displayName},
+
+Your account request has been declined.
+
+Kind Regards
+{AdminName}
+
+' => '',
     'Here you can create or edit profile categories and fields.' => '',
     'If individual profile permissions are not allowed, the following settings are unchangeable for all users. If individual profile permissions are allowed, the settings are only set as defaults that users can customise. The following entries are then displayed in the same form in the users profile settings:' => '',
     'Include captcha in registration form' => '',
@@ -151,8 +159,11 @@ Kind Regards<br>
     'Only applicable when limited access for non-authenticated users is enabled. Only affects new users.' => '',
     'Prioritised User Group' => '',
     'Profile Permissions' => '',
+    'Protected' => '',
+    'Protected group can not be deleted!' => '',
     'Select a prioritised group whose members are displayed before all others when the sorting option \'Default\' is selected. The users within the group and the users outside the group are additionally sorted by their last login.' => '',
     'Select which user information should be displayed in the \'People\' overview. You can select any profile fields, even those you have created individually. ' => '',
+    'Send & decline' => '',
     'Send notifications to users when added to or removed from the group.' => '',
     'Show group selection at registration' => '',
     'The Space memberships of all group members will be updated. This may take up to several minutes.' => '',

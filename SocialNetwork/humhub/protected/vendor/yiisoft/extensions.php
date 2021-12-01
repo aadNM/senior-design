@@ -6,7 +6,7 @@ return array (
   'kartik-v/yii2-krajee-base' => 
   array (
     'name' => 'kartik-v/yii2-krajee-base',
-    'version' => '2.0.6.0',
+    'version' => '3.0.1.0',
     'alias' => 
     array (
       '@kartik/base' => $vendorDir . '/kartik-v/yii2-krajee-base/src',
@@ -24,7 +24,7 @@ return array (
   'kartik-v/yii2-widget-touchspin' => 
   array (
     'name' => 'kartik-v/yii2-widget-touchspin',
-    'version' => '1.2.3.0',
+    'version' => '1.2.4.0',
     'alias' => 
     array (
       '@kartik/touchspin' => $vendorDir . '/kartik-v/yii2-widget-touchspin/src',
@@ -69,7 +69,7 @@ return array (
   'kartik-v/yii2-widget-select2' => 
   array (
     'name' => 'kartik-v/yii2-widget-select2',
-    'version' => '2.2.1.0',
+    'version' => '2.2.2.0',
     'alias' => 
     array (
       '@kartik/select2' => $vendorDir . '/kartik-v/yii2-widget-select2/src',
@@ -168,7 +168,7 @@ return array (
   'kartik-v/yii2-widget-activeform' => 
   array (
     'name' => 'kartik-v/yii2-widget-activeform',
-    'version' => '1.5.8.0',
+    'version' => '1.6.0.0',
     'alias' => 
     array (
       '@kartik/form' => $vendorDir . '/kartik-v/yii2-widget-activeform/src',
@@ -195,7 +195,7 @@ return array (
   'yiisoft/yii2-httpclient' => 
   array (
     'name' => 'yiisoft/yii2-httpclient',
-    'version' => '2.0.13.0',
+    'version' => '2.0.14.0',
     'alias' => 
     array (
       '@yii/httpclient' => $vendorDir . '/yiisoft/yii2-httpclient/src',
@@ -204,7 +204,7 @@ return array (
   'yiisoft/yii2-authclient' => 
   array (
     'name' => 'yiisoft/yii2-authclient',
-    'version' => '2.2.10.0',
+    'version' => '2.2.11.0',
     'alias' => 
     array (
       '@yii/authclient' => $vendorDir . '/yiisoft/yii2-authclient/src',
@@ -213,7 +213,7 @@ return array (
   'yiisoft/yii2-bootstrap' => 
   array (
     'name' => 'yiisoft/yii2-bootstrap',
-    'version' => '2.0.10.0',
+    'version' => '2.0.11.0',
     'alias' => 
     array (
       '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap/src',
@@ -259,7 +259,7 @@ return array (
   'yiisoft/yii2-redis' => 
   array (
     'name' => 'yiisoft/yii2-redis',
-    'version' => '2.0.15.0',
+    'version' => '2.0.16.0',
     'alias' => 
     array (
       '@yii/redis' => $vendorDir . '/yiisoft/yii2-redis/src',
@@ -277,7 +277,7 @@ return array (
   'yiisoft/yii2-debug' => 
   array (
     'name' => 'yiisoft/yii2-debug',
-    'version' => '2.1.17.0',
+    'version' => '2.1.18.0',
     'alias' => 
     array (
       '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug/src',

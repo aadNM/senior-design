@@ -21,6 +21,7 @@ return array (
   'All open registration invitations were successfully deleted.' => 'Tutti gli inviti di registrazione aperti sono stati eliminati con successo.',
   'All the personal data of this user will be irrevocably deleted.' => 'Tutti di dati personali di questo utente verranno irrimediabilmente eliminati.',
   'Allow' => 'Consenti',
+  'Allow users to block each other' => '',
   'Allow users to set individual permissions for their own profile?' => 'Consentire agli utenti di impostare autorizzazioni individuali per il proprio profilo?',
   'Allow visitors limited access to content without an account (Adds visibility: "Guest")' => 'Consenti accesso limitato per gli utenti non autenticati (guest)',
   'Applied to new or existing users without any other group membership.' => 'Applicato a utenti nuovi o esistenti senza altri membri del gruppo.',
@@ -44,7 +45,7 @@ return array (
   'Default Sorting' => 'Ordinamento predefinito',
   'Default content of the registration approval email' => 'Contenuto predefinito dell\'email per l\'autorizzazione di registrazione di un utente',
   'Default content of the registration denial email' => 'Contenuto predefinito dell\'email per la mancata autorizzazione di registrazione di un utente',
-  'Default groups can not be deleted!' => 'I gruppi predefiniti non possono essere eliminati!',
+  'Default group can not be deleted!' => '',
   'Default user idle timeout, auto-logout (in seconds, optional)' => 'Tempo standard di timeout per inattività, auto disconnessione (in secondi, facoltativo)',
   'Default user profile visibility' => 'Visibilità predefinita per il profilo utente',
   'Delete' => 'Elimina',
@@ -71,18 +72,25 @@ return array (
   'Group not found!' => 'Gruppo non trovato!',
   'Group user not found!' => 'Gruppo utente non trovato!',
   'Groups' => 'Gruppi',
-  'Hello {displayName},<br><br>
-Your account has been activated.<br><br>
-Click here to login:<br>
-{loginLink}<br><br>
+  'Hello {displayName},
 
-Kind Regards<br>
-{AdminName}<br><br>' => 'Ciao {displayName},<br><br> il tuo account è stato attivato.<br><br> Clicca qui per collegarti:<br> {loginLink}<br><br> Saluti <br> {AdminName}<br><br>',
-  'Hello {displayName},<br><br>
-Your account request has been declined.<br><br>
+Your account has been activated.
 
-Kind Regards<br>
-{AdminName} <br><br> ' => 'Ciao {displayName},<br><br> la richiesta di attivazione del tuo account è stata respinta.<br><br> Saluti <br> {AdminName} <br><br>',
+Click here to login:
+{loginUrl}
+
+Kind Regards
+{AdminName}
+
+' => '',
+  'Hello {displayName},
+
+Your account request has been declined.
+
+Kind Regards
+{AdminName}
+
+' => '',
   'Here you can create or edit profile categories and fields.' => 'Qui puoi creare o modificare le categorie del profilo e i campi',
   'If individual profile permissions are not allowed, the following settings are unchangeable for all users. If individual profile permissions are allowed, the settings are only set as defaults that users can customise. The following entries are then displayed in the same form in the users profile settings:' => 'Se le autorizzazioni del profilo individuale non sono consentite, le seguenti impostazioni non sono modificabili per tutti gli utenti. Se sono consentiti i permessi del profilo individuale, le impostazioni vengono impostate solo come predefinite che gli utenti possono personalizzare. Le seguenti voci vengono quindi visualizzate nello stesso modulo nelle impostazioni del profilo utente:',
   'If this option is not selected, the ownership of the spaces will be transferred to your account.' => 'Se l\'opzione non è selezionata, la proprietà di questo spazio verrà trasferita al tuo account.',
@@ -122,6 +130,8 @@ Kind Regards<br>
   'Prioritised User Group' => 'Gruppo utenti prioritari',
   'Profile Permissions' => 'Permessi del profilo',
   'Profiles' => 'Profili',
+  'Protected' => 'Protetto',
+  'Protected group can not be deleted!' => '',
   'Remove from group' => 'Rimuovi dal gruppo',
   'Require group admin approval after registration' => 'Richiede l\'approvazione dell\'amministratore del gruppo dopo la registrazione',
   'Resend invitation email' => 'Invia di nuovo l\'invito per email',
@@ -130,6 +140,7 @@ Kind Regards<br>
   'Select Groups' => 'Seleziona Gruppi',
   'Select a prioritised group whose members are displayed before all others when the sorting option \'Default\' is selected. The users within the group and the users outside the group are additionally sorted by their last login.' => 'Seleziona un gruppo prioritario i cui membri vengono visualizzati prima di tutti gli altri quando è selezionata l\'opzione di ordinamento "Predefinito". Gli utenti all\'interno del gruppo e gli utenti al di fuori del gruppo vengono inoltre ordinati in base all\'ultimo accesso.',
   'Select which user information should be displayed in the \'People\' overview. You can select any profile fields, even those you have created individually. ' => 'Seleziona quali informazioni utente devono essere visualizzate nella panoramica "Persone". Puoi selezionare qualsiasi campo del profilo, anche quelli che hai creato individualmente.',
+  'Send & decline' => 'Invia e rifiuta',
   'Send & save' => 'Invia e salva',
   'Send invitation email' => 'Invia invito per email',
   'Send invitation email again?' => 'Invia nuovamente l\'invito per email?',

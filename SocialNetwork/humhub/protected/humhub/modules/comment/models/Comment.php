@@ -41,6 +41,8 @@ use humhub\modules\user\models\User;
  */
 class Comment extends ContentAddonActiveRecord implements ContentOwner
 {
+    const CACHE_KEY_COUNT = 'commentCount_%s_%s';
+    const CACHE_KEY_LIMITED = 'commentsLimited_%s_%s';
 
     /**
      * @inheritdoc
@@ -116,8 +118,8 @@ class Comment extends ContentAddonActiveRecord implements ContentOwner
 
     public static function flushCommentCache($model, $id)
     {
-        Yii::$app->cache->delete('commentCount_' . $model . '_' . $id);
-        Yii::$app->cache->delete('commentsLimited_' . $model . '_' . $id);
+        Yii::$app->cache->delete(sprintf(static::CACHE_KEY_COUNT, $model, $id));
+        Yii::$app->cache->delete(sprintf(static::CACHE_KEY_LIMITED, $model, $id));
     }
 
     /**
@@ -142,7 +144,7 @@ class Comment extends ContentAddonActiveRecord implements ContentOwner
         $mentionedUsers = (isset($processResult['mentioning'])) ? $processResult['mentioning'] : [];
 
         if ($insert) {
-            $followerQuery = $this->getCommentedRecord()->getFollowers(null, true, true);
+            $followerQuery = $this->getCommentedRecord()->getFollowersWithNotificationQuery();
 
             // Remove mentioned users from followers query to avoid double notification
             if (count($mentionedUsers) !== 0) {
@@ -198,13 +200,14 @@ class Comment extends ContentAddonActiveRecord implements ContentOwner
     /**
      * Returns a limited amount of comments
      *
-     * @param $model
-     * @param $id
+     * @param string $model
+     * @param int $id
      * @param int|null $limit when null the default limit will used
+     * @param int|null $currentCommentId ID of the current Comment which should be visible on the limited result
      *
      * @return Comment[] the comments
      */
-    public static function GetCommentsLimited($model, $id, $limit = null)
+    public static function GetCommentsLimited($model, $id, $limit = null, $currentCommentId = null)
     {
         if ($limit === null) {
             /** @var Module $module */
@@ -212,21 +215,30 @@ class Comment extends ContentAddonActiveRecord implements ContentOwner
             $limit = $module->commentsPreviewMax;
         }
 
-        $cacheID = sprintf("commentsLimited_%s_%s", $model, $id);
-        $comments = Yii::$app->cache->get($cacheID);
+        $currentCommentId = intval($currentCommentId);
+        $useCaching = empty($currentCommentId);// No need to cache comments for deep single comment view
 
-        if ($comments === false) {
+        $cacheID = sprintf(static::CACHE_KEY_LIMITED, $model, $id);
+        $comments = $useCaching ? Yii::$app->cache->get($cacheID) : false;
+
+        if (!$useCaching || $comments === false) {
             $commentCount = self::GetCommentCount($model, $id);
 
             $query = Comment::find();
             $query->offset($commentCount - $limit);
-            $query->orderBy('created_at ASC');
+            if ($currentCommentId && Comment::findOne(['id' => $currentCommentId])) {
+                $query->orderBy('`comment`.`id` <= ' . ($currentCommentId + intval($limit) - 1));
+            } else {
+                $query->orderBy('created_at ASC');
+            }
             $query->limit($limit);
             $query->where(['object_model' => $model, 'object_id' => $id]);
             $query->joinWith('user');
 
             $comments = $query->all();
-            Yii::$app->cache->set($cacheID, $comments, Yii::$app->settings->get('cache.expireTime'));
+            if ($useCaching) {
+                Yii::$app->cache->set($cacheID, $comments, Yii::$app->settings->get('cache.expireTime'));
+            }
         }
 
         return $comments;
@@ -242,7 +254,7 @@ class Comment extends ContentAddonActiveRecord implements ContentOwner
      */
     public static function GetCommentCount($model, $id)
     {
-        $cacheID = sprintf("commentCount_%s_%s", $model, $id);
+        $cacheID = sprintf(static::CACHE_KEY_COUNT, $model, $id);
         $commentCount = Yii::$app->cache->get($cacheID);
 
         if ($commentCount === false) {

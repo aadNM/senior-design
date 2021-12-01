@@ -322,7 +322,7 @@ function XMLHttpRequest(opts) {
       }
 
       if (settings.async) {
-        fs.readFile(url.pathname, 'utf8', function(error, data) {
+        fs.readFile(unescape(url.pathname), 'utf8', function(error, data) {
           if (error) {
             self.handleError(error);
           } else {
@@ -333,7 +333,7 @@ function XMLHttpRequest(opts) {
         });
       } else {
         try {
-          this.responseText = fs.readFileSync(url.pathname, 'utf8');
+          this.responseText = fs.readFileSync(unescape(url.pathname), 'utf8');
           this.status = 200;
           setState(self.DONE);
         } catch(e) {

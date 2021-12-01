@@ -1,8 +1,8 @@
 /*!
  * @package   yii2-widget-activeform
  * @author    Kartik Visweswaran <kartikv2@gmail.com>
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2015 - 2019
- * @version   1.5.8
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2015 - 2021
+ * @version   1.6.0
  *
  * Active Field Hints Display Module
  *

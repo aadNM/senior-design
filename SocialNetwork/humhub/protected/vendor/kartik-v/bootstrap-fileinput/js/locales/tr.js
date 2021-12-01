@@ -8,10 +8,21 @@
  *
  * NOTE: this file must be saved in UTF-8 encoding.
  */
-(function ($) {
+(function (factory) {
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else if (typeof module === 'object' && typeof module.exports === 'object') {
+        factory(require('jquery'));
+    } else {
+        factory(window.jQuery);
+    }
+}(function ($) {
     "use strict";
 
     $.fn.fileinputLocales['tr'] = {
+        sizeUnits: ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'], 
+        bitRateUnits: ['B/s', 'KB/s', 'MB/s', 'GB/s', 'TB/s', 'PB/s', 'EB/s', 'ZB/s', 'YB/s'],
         fileSingle: 'dosya',
         filePlural: 'dosyalar',
         browseLabel: 'Gözat &hellip;',
@@ -66,6 +77,7 @@
         msgLoading: 'Dosya yükleniyor {index} / {files} &hellip;',
         msgProgress: 'Dosya yükleniyor {index} / {files} - {name} - %{percent} tamamlandı.',
         msgSelected: '{n} {files} seçildi',
+        msgProcessing: 'Processing ...',
         msgFoldersNotAllowed: 'Yalnızca dosyaları sürükleyip bırakabilirsiniz! {n} dizin(ler) göz ardı edildi.',
         msgImageWidthSmall: '"{name}" adlı görüntü dosyasının genişliği en az {size} piksel olmalıdır.',
         msgImageHeightSmall: '"{name}" adlı görüntü dosyasının yüksekliği en az {size} piksel olmalıdır.',
@@ -108,4 +120,4 @@
             close: 'Detaylı önizlemeyi kapat'
         }
     };
-})(window.jQuery);
+}));

@@ -10,10 +10,21 @@
  *
  * NOTE: this file must be saved in UTF-8 encoding.
  */
-(function ($) {
+(function (factory) {
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else if (typeof module === 'object' && typeof module.exports === 'object') {
+        factory(require('jquery'));
+    } else {
+        factory(window.jQuery);
+    }
+}(function ($) {
     "use strict";
 
     $.fn.fileinputLocales['it'] = {
+        sizeUnits: ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'], 
+        bitRateUnits: ['B/s', 'KB/s', 'MB/s', 'GB/s', 'TB/s', 'PB/s', 'EB/s', 'ZB/s', 'YB/s'],
         fileSingle: 'file',
         filePlural: 'file',
         browseLabel: 'Sfoglia &hellip;',
@@ -68,6 +79,7 @@
         msgLoading: 'Caricamento file {index} di {files} &hellip;',
         msgProgress: 'Caricamento file {index} di {files} - {name} - {percent}% completato.',
         msgSelected: '{n} {files} selezionati',
+        msgProcessing: 'Processing ...',
         msgFoldersNotAllowed: 'Trascina solo file! Ignorata/e {n} cartella/e.',
         msgImageWidthSmall: 'La larghezza dell\'immagine "{name}" deve essere di almeno {size} px.',
         msgImageHeightSmall: 'L\'altezza dell\'immagine "{name}" deve essere di almeno {size} px.',
@@ -111,4 +123,4 @@
             close: 'Chiudi'
         }
     };
-})(window.jQuery);
+}));

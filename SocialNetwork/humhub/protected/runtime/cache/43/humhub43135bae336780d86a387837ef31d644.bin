@@ -1,1 +1,0 @@
-a:2:{i:0;a:3:{s:14:"enabledDrivers";s:95:"humhub\modules\twofa\drivers\EmailDriver,humhub\modules\twofa\drivers\GoogleAuthenticatorDriver";s:14:"enforcedGroups";s:3:"1,2";s:10:"codeLength";s:1:"6";}i:1;N;}

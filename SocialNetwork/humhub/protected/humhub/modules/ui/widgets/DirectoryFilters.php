@@ -30,6 +30,10 @@ abstract class DirectoryFilters extends Widget
      */
     public $pageUrl;
 
+
+    /**
+     * @inheritDoc
+     */
     public function init()
     {
         $this->initDefaultFilters();
@@ -85,6 +89,7 @@ abstract class DirectoryFilters extends Widget
             case 'dropdown':
             case 'dropdownlist':
                 $inputOptions['data-action-change'] = 'directory.applyFilters';
+                $inputOptions['options'] = ['separator' => ['disabled' => '']];
                 $inputHtml = Html::dropDownList($filter, self::getValue($filter), $data['options'], $inputOptions);
                 break;
 
@@ -97,12 +102,17 @@ abstract class DirectoryFilters extends Widget
                 $inputHtml = Html::textInput($filter, self::getValue($filter), $inputOptions);
         }
 
-        return $data['beforeInput'].$inputHtml.$data['afterInput'];
+        return $data['beforeInput'] . $inputHtml . $data['afterInput'];
     }
 
     public function addFilter(string $filterKey, array $filterData)
     {
         $this->filters[$filterKey] = $filterData;
+    }
+
+    public function removeFilter(string $filterKey)
+    {
+        unset($this->filters[$filterKey]);
     }
 
     public static function getDefaultValue(string $filter): string

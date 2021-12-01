@@ -9,6 +9,7 @@
 namespace humhub\modules\user\models;
 
 use humhub\components\behaviors\GUID;
+use humhub\modules\admin\Module as AdminModule;
 use humhub\modules\admin\permissions\ManageGroups;
 use humhub\modules\admin\permissions\ManageUsers;
 use humhub\modules\content\components\behaviors\CompatModuleManager;
@@ -62,6 +63,7 @@ use yii\web\IdentityInterface;
  *
  * @property string $displayName
  * @property string $displayNameSub
+ * @mixin Followable
  */
 class User extends ContentContainerActiveRecord implements IdentityInterface, Searchable
 {
@@ -155,7 +157,7 @@ class User extends ContentContainerActiveRecord implements IdentityInterface, Se
                 return $model->getAttribute($attribute) !== $model->getOldAttribute($attribute);
             }],
             [['status', 'created_by', 'updated_by', 'visibility'], 'integer'],
-            [['tagsField'], 'safe'],
+            [['tagsField', 'blockedUsersField'], 'safe'],
             [['guid'], 'string', 'max' => 45],
             [['time_zone'], 'validateTimeZone'],
             [['auth_mode'], 'string', 'max' => 10],
@@ -250,7 +252,7 @@ class User extends ContentContainerActiveRecord implements IdentityInterface, Se
         $scenarios = parent::scenarios();
         $scenarios[static::SCENARIO_LOGIN] = ['username', 'password'];
         $scenarios[static::SCENARIO_EDIT_ADMIN] = ['username', 'email', 'status', 'language', 'tagsField'];
-        $scenarios[static::SCENARIO_EDIT_ACCOUNT_SETTINGS] = ['language', 'visibility', 'time_zone', 'tagsField'];
+        $scenarios[static::SCENARIO_EDIT_ACCOUNT_SETTINGS] = ['language', 'visibility', 'time_zone', 'tagsField', 'blockedUsersField'];
         $scenarios[static::SCENARIO_REGISTRATION_EMAIL] = ['username', 'email', 'time_zone'];
         $scenarios[static::SCENARIO_REGISTRATION] = ['username', 'time_zone'];
 
@@ -784,6 +786,32 @@ class User extends ContentContainerActiveRecord implements IdentityInterface, Se
     }
 
     /**
+     * Determines if this user can impersonate the given user.
+     *
+     * @param self $user
+     * @return bool
+     * @since 1.10
+     */
+    public function canImpersonate(self $user): bool
+    {
+        /* @var AdminModule $adminModule */
+        $adminModule = Yii::$app->getModule('admin');
+        if (!$adminModule->allowUserImpersonate) {
+            return false;
+        }
+
+        if (!$this->isSystemAdmin()) {
+            return false;
+        }
+
+        if ($user->id == $this->id) {
+            return false;
+        }
+
+        return (new PermissionManager(['subject' => $this]))->can(ManageUsers::class);
+    }
+
+    /**
      * @return ActiveQuery
      */
     public function getAuths()
@@ -845,13 +873,12 @@ class User extends ContentContainerActiveRecord implements IdentityInterface, Se
     }
 
     /**
-     * @param string Module id
-     * @return ContentContainerSettingsManager
+     * @inheritdoc
      */
-    public function getSettings($moduleId = 'user')
+    public function getSettings(): ContentContainerSettingsManager
     {
         /* @var $module Module */
-        $module = Yii::$app->getModule($moduleId);
+        $module = Yii::$app->getModule('user');
         return $module->settings->contentContainer($this);
     }
 
