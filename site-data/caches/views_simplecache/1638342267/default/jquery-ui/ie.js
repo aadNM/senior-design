@@ -1,0 +1,1 @@
+(function(factory){if(typeof define==="function"&&define.amd){define("jquery-ui/ie",["jquery","./version"],factory);}else{factory(jQuery);}}(function($){return $.ui.ie=!!/msie [\w.]+/.exec(navigator.userAgent.toLowerCase());}));

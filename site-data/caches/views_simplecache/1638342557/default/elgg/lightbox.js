@@ -1,0 +1,10 @@
+define("elgg/lightbox",['jquery','elgg','elgg/Ajax','jquery.colorbox'],function($,elgg,Ajax){var lightbox={getOptions:function(opts){if(!$.isPlainObject(opts)){opts={};}
+var defaults=elgg.data.lightbox;if(!defaults.reposition){defaults.reposition=$(window).height()>600;}
+elgg.provide('elgg.ui.lightbox');var settings=$.extend({},defaults,opts);return elgg.trigger_hook('getOptions','ui.lightbox',null,settings);},bind:function(selector,opts,use_element_data){if(!$.isPlainObject(opts)){opts={};}
+if(use_element_data===false){$(selector).colorbox(lightbox.getOptions(opts));return;}
+$(document).off('click.lightbox',selector).on('click.lightbox',selector,function(e){$(document).click();$('.elgg-system-messages .elgg-message').remove();e.preventDefault();var $this=$(this),href=$this.prop('href')||$this.prop('src'),dataOpts=$this.data('colorboxOpts'),currentOpts={};if(!$.isPlainObject(dataOpts)){dataOpts={};}
+if(!dataOpts.href&&href){dataOpts.href=href;}
+$.extend(currentOpts,opts,dataOpts);if(currentOpts.inline&&currentOpts.href){currentOpts.href=elgg.getSelectorFromUrlFragment(currentOpts.href);}
+if(currentOpts.photo||currentOpts.inline||currentOpts.iframe||currentOpts.html){lightbox.open(currentOpts);return;}
+currentOpts.ajaxLoadWithDependencies=true;lightbox.open(currentOpts);});$(window).off('resize.lightbox').on('resize.lightbox',function(){elgg.data.lightbox.reposition=$(window).height()>600;lightbox.resize();});},open:function(opts){var currentOpts=lightbox.getOptions(opts);if(!currentOpts.ajaxLoadWithDependencies){$.colorbox(currentOpts);return;}
+href=currentOpts.href;currentOpts.href=false;var data=currentOpts.data;currentOpts.data=undefined;$.colorbox(currentOpts);var ajax=new Ajax(false);ajax.path(href,{data:data}).done(function(output){currentOpts.html=output;$.colorbox(currentOpts);currentOpts.html=undefined;});},close:$.colorbox.close,resize:$.colorbox.resize};lightbox.bind(".elgg-lightbox");lightbox.bind(".elgg-lightbox-photo",{photo:true});lightbox.bind(".elgg-lightbox-inline",{inline:true});lightbox.bind(".elgg-lightbox-iframe",{iframe:true});return lightbox;});

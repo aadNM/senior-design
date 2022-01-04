@@ -1,0 +1,4 @@
+define("elgg/admin",['jquery'],function($){function init(){$(document).on('click','input:checkbox.elgg-state-disabled, label.elgg-state-disabled > input:checkbox',function(){return false;});$('[name=require_admin_validation]').click(adminValidationToggle);$('[name=simplecache_enabled]').click(simplecacheToggle);}
+function simplecacheToggle(){if(!$(this).hasClass('elgg-state-disabled')){var names=['simplecache_minify_js','simplecache_minify_css','cache_symlink_enabled'];for(var i=0;i<names.length;i++){var $input=$('input[type!=hidden][name="'+names[i]+'"]');if($input.length){$input.parent().toggleClass('elgg-state-disabled');}}}}
+function adminValidationToggle(){if($(this).prop('checked')){$('.elgg-admin-users-admin-validation-notification').show();}else{$('.elgg-admin-users-admin-validation-notification').hide();}}
+init();});

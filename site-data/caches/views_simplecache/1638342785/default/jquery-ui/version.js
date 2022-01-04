@@ -1,0 +1,1 @@
+(function(factory){if(typeof define==="function"&&define.amd){define("jquery-ui/version",["jquery"],factory);}else{factory(jQuery);}}(function($){$.ui=$.ui||{};return $.ui.version="1.12.1";}));
