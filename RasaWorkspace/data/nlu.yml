@@ -15,6 +15,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+
 - intent: goodbye
   examples: |
     - good afternoon
@@ -28,6 +29,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
+
 - intent: inform
   examples: |
     - [Lawrence](location)
@@ -53,6 +55,11 @@ nlu:
     - [Ottawa](location)
     - [Oklahoma](location)
     - I live in Kansas City
+
+- intent: resource_inquiry
+  examples: |
+    - What is the [hotline]'s number?(resource_type)
+
 - intent: search_provider
   examples: |
     - [hospital](facility_type)
@@ -88,6 +95,7 @@ nlu:
     - help me find a [Community Mental Health Center](facility_type)
     - help me find a [CMHC](facility_type)
     - help me find a doctor in Lawrence
+
 - intent: talk
   examples: |
     - I want someone to talk to
@@ -96,6 +104,7 @@ nlu:
     - I only need to talk
     - I want to rant
     - I just want some comapany
+
 - intent: suicide
   examples: |
     - I want to die
@@ -115,6 +124,7 @@ nlu:
     - They'll be sorry when I'm gone
     - I want to go to sleep forever
     - I want to escape
+
 - intent: wanting_safety
   examples: |
     - I don't want to kill myself
@@ -127,12 +137,14 @@ nlu:
     - I don't want to cut
     - I don't want to die
     - I don't want to hurt myself
+
 - intent: self_harm
   examples: |
     - I want to cut
     - I want to feel something
     - I am thinking about hurting myself
     - I am thinking about cutting myself
+
 - intent: affirm
   examples: |
     - yes
@@ -148,6 +160,7 @@ nlu:
     - I know right
     - ikr
     - I agree
+
 - intent: deny
   examples: |
     - no
@@ -161,6 +174,7 @@ nlu:
     - I don't want to
     - what about no
     - I refuse
+
 - intent: mood_great
   examples: |
     - [perfect](mood_type)
@@ -185,6 +199,7 @@ nlu:
     - This is a [good day](mood_type)
     - It is a [beautiful day](mood_type)
     - I am [enjoying](mood_type) my day
+
 - intent: thanks
   examples: |
     - Thank you!
@@ -192,6 +207,7 @@ nlu:
     - Thank you so much.
     - I really appreciate your help.
     - Thanks!
+
 - intent: mood_unhappy
   examples: |
     - my day was [horrible](mood_type)
@@ -226,15 +242,20 @@ nlu:
     - [anxious](mood_type)
     - I am [not okay](mood_type)
     - Now you see me
+
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
 - intent: willing_for_safety
   examples: |
     - no. I don't want to die.
-- intent: cooping_techniques
+
+- intent: coping_techniques
   examples: |
     - I usually listen to music or paint.
+
+  
