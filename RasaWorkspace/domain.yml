@@ -1,4 +1,5 @@
 version: '2.0'
+
 config:
   store_entities_as_slots: true
 session_config:
@@ -19,22 +20,176 @@ intents:
     use_entities: true
 - bot_challenge:
     use_entities: true
-entities: []
-slots: {}
+- search_provider:
+    use_entities: true
+- suicide:
+    use_entities: true
+- self_harm:
+    use_entities: true
+- mood_concerned:
+    use_entities: true
+- talk:
+    use_entities: true
+- inform:
+    use_entities: true
+- willing_for_safety:
+    use_entities: true
+- agree:
+    use_entities: true
+- thanks:
+    use_entities: true
+- wanting_safety:
+    use_entities: true
+- cooping_techniques:
+    use_entities: true
+
+
+entities:
+- location
+- facility_type
+- mood_type
+- professional_type
+- service_type
+- location"
+- location:Lawrence
+
+
+slots:
+  age:
+    type: text
+    influence_conversation: true
+  
+  address:
+    type: text
+    influence_conversation: true
+  
+  feeling:
+    type: text
+    influence_conversation: true
+    
+
 responses:
   utter_greet:
   - text: Hey! How are you?
+  - text: Hello there! How is it going?
+  - text: Hi! What's up?
+  - text: Hi! How are you doing?
+  - text: Hey! How is your day going?
+  
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'
+
   utter_did_that_help:
   - text: Did that help you?
+  - text: Do you find that helpful?
+  - text: Does that help?
+  - text: Do you think this is helping?
+  - text: Do you find this useful?
+
   utter_happy:
   - text: Great, carry on!
+  - text: Awesome!
+  - text: I am glad to hear that.
+  - text: Good!
+  
+  utter_your_welcome:
+  - text: You are welcome!
+  - text: No problem!
+  - text: Anytime!
+  - text: You're welcome!
+  - text: I am glad I could help.
+
   utter_goodbye:
-  - text: Bye
+  - text: Bye!
+  - text: Have a good one.
+  - text: Have a good rest of your day.
+
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-actions: []
+  - text: My name is JDG. I am not a human.
+  - text: I am an AI trained to help you.
+
+  utter_ambivalence:
+  - text: |
+      I hear that ....... and suicide seems like a solution for you.
+      But you are reached out. That tell me that there is a part of you
+      that believes there is another way than killing yourself.
+      I am here to help you with both.
+
+  utter_stay_away:
+  - text: Would you mind stepping away from the tools you are using.
+  - text: Is it possible for you to be in a different room where you can't see it.
+  - text: It would be great if you don't touch it, but just be in a different room.
+
+  utter_ask_location:
+  - text: Do you mind telling me where you are right now?
+  - text: It would be easier for me to help you, if I know your location.
+  - text: Which county are you in?
+  - text: Do you live in Kansas?
+  - text: Can you tell me the couty I should be looking in?
+  - text: Would you mind telling me your county's name?
+  - text: Please, tell me your county's name?
+  - text: To help you find a {facility_type} I need to know your county.
+
+  utter_ask_intent:
+  - text: Have you done anything to hurt yourself today?
+  - text: Did you hurt yourself?
+  - text: Are you thinking about hurting yourself?
+
+  utter_suicide_intent:
+  - text: Are you thinking about killing yourself?
+  - text: Have you tried killing yourself?
+
+  utter_ask_cause:
+  - text: What is making your feel this way?
+  - text: Do you know why are feeling this way?
+  - text: What makes you feel that way?
+
+  utter_agree:
+  - text: Yes!
+  - text: I agree.
+
+  utter_short_term_safety:
+  - text: Do you have someone who can come keep you company?
+  - text: Is there someone close who can come stay with you for a moment?
+
+  utter_refer_call_hotline:
+  - text: You can reach the HeadQuarters at
+  - text: I can ask someone at Kansas Suice Prevention hotline to call you.
+
+  utter_coping_mechanisms:
+  - text: What do you think can help you calm down?
+  - text: Is there something that usually helps?
+  - text: What do you usually do when you are feeling this way?
+
+  utter_come_back:
+  - text: This line is open 24/7. Feel free to reach out at any time you.
+  - text: Don't hesitate to reach out when you want. We are here to for you.
+
+  utter_listening_for_topic:
+  - text: I am listening....
+  - text: What do you want to talk about?
+  - text: What's up?
+  - text: I am here to talk with you.
+  - text: ''
+
+  utter_how_are_u:
+  - text: How are you?
+  - text: How are you doing?
+  - text: What's going on?
+
+  utter_hotline_number:
+  - text: The National Suicide Prevention Hotline Number is 800-273-8255
+
+  utter_reflect:
+  - text: I hear that you are feeling {feeling}.
+  - text: It sounds like you are feeling {feeling}.
+
+actions:
+- action_search_facility
+- utter_listening_for_topic
+
 forms: {}
+
 e2e_actions: []

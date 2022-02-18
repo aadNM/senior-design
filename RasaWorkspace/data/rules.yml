@@ -6,8 +6,47 @@ rules:
   steps:
   - intent: goodbye
   - action: utter_goodbye
+  wait_for_user_input: false
 
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: greet back 
+  conversation_start: true
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_how_are_u
+
+- rule: provide hotline number
+  steps:
+  - intent: resource_inquiry
+    entities:
+    - resource_type: hotline
+  - action: utter_hotline_number
+
+- rule: reflect feeling 
+  steps:
+  - or:
+    - intent: mood_great
+    - slot_was_set:
+      - feeling: mood_type
+
+    - intent: mood_unhappy
+  - action: utter_reflect
+
+# - rule: State ambivalence when intent of suicide
+#   steps:
+#   - intent: suicide
+#   - action: utter_ambivalence
+#   - intent: willing_for_safety
+#   - action: utter_coping_mechanisms
+
+# - rule: Ask to stay away when intent of selfharm
+#   steps:
+#   - intent: self_harm
+#   - action: utter_stay_away
+#   - intent: agree
+#   - action: utter_short_term_safety
