@@ -1,41 +1,41 @@
 <?php return array (
-  'components' => 
+  'components' =>
   array (
-    'db' => 
+    'db' =>
     array (
       'class' => 'yii\\db\\Connection',
-      'dsn' => 'mysql:host=localhost;port=80;dbname=socialnet',
-      'username' => 'socialnet',
-      'password' => 'ku-design',
+      'dsn' => 'mysql:host=localhost;dbname=CCCSDT',
+      'username' => 'ku-design',
+      'password' => 'Young00528',
     ),
-    'user' => 
+    'user' =>
     array (
     ),
-    'mailer' => 
+    'mailer' =>
     array (
-      'transport' => 
+      'transport' =>
       array (
         'class' => 'Swift_MailTransport',
       ),
     ),
-    'cache' => 
+    'cache' =>
     array (
       'class' => 'yii\\caching\\FileCache',
       'keyPrefix' => 'humhub',
     ),
-    'formatter' => 
+    'formatter' =>
     array (
       'defaultTimeZone' => 'America/Chicago',
     ),
   ),
-  'params' => 
+  'params' =>
   array (
-    'installer' => 
+    'installer' =>
     array (
-      'db' => 
+      'db' =>
       array (
         'installer_hostname' => 'localhost',
-        'installer_database' => 'socialnet',
+        'installer_database' => 'CCCSDT/.',
       ),
     ),
     'config_created_at' => 1634962701,
@@ -43,7 +43,7 @@
     'databaseInstalled' => true,
     'installed' => true,
   ),
-  'name' => 'Social Dilema',
+  'name' => 'socialnet',
   'language' => 'en-US',
   'timeZone' => 'America/Chicago',
 ); ?>
