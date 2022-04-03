@@ -1,0 +1,199 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- affirm
+- agree
+- bot_challenge
+- chitchat
+- cooping_techniques
+- coping_techniques
+- deny
+- goodbye
+- greet
+- human_handoff
+- important
+- importants
+- insult
+- location_info
+- mood_concerned
+- mood_great
+- mood_happy
+- mood_unhappy
+- need_help:
+    use_entities: []
+- not_wanting_safety:
+    use_entities: []
+- resource_inquiry
+- search_provider
+- self_harm
+- suicide
+- thank_you
+- thanks
+- values
+- want_to_talk
+- wanting_safety
+- willing_for_safety
+entities:
+- feeling
+- coping
+- important
+- location
+- facility_type
+- professional_type
+- service_type
+- location"
+- location:Lawrence
+- resource_type
+- value
+slots:
+  feeling:
+    type: text
+    influence_conversation: true
+  important:
+    type: text
+    influence_conversation: true
+  values:
+    type: text
+    influence_conversation: true
+  coping:
+    type: text
+    influence_conversation: false
+  is_happy:
+    type: bool
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  - text: Hello there! How is it going?
+  - text: Hi! What's up?
+  - text: Hi! How are you doing?
+  - text: Hey! How is your day going?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  - text: Do you find that helpful?
+  - text: Does that help?
+  - text: Do you think this is helping?
+  - text: Do you find this useful?
+  utter_happy:
+  - text: Great, carry on!
+  - text: Awesome!
+  - text: I am glad to hear that.
+  - text: Good!
+  utter_your_welcome:
+  - text: You are welcome!
+  - text: No problem!
+  - text: Anytime!
+  - text: You're welcome!
+  - text: I am glad I could help.
+  utter_goodbye:
+  - text: Bye!
+  - text: Have a good one.
+  - text: Have a good rest of your day.
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  - text: My name is spoon. I am not a human.
+  - text: I am an AI trained to help you.
+  utter_ambivalence:
+  - text: |
+      I hear that {feeling} and suicide seems like a solution for you.
+      But you are reached out. That tell me that there is a part of you
+      that believes there is another way than killing yourself.
+      I am here to help you with both.
+  utter_stay_away:
+  - text: Would you mind stepping away from the tools you are using.
+  - text: Is it possible for you to be in a different room where you can't see it.
+  - text: It would be great if you don't touch it, but just be in a different room.
+  utter_ask_location:
+  - text: Do you mind telling me where you are right now?
+  - text: It would be easier for me to help you, if I know your location.
+  - text: Which county are you in?
+  - text: Do you live in Kansas?
+  - text: Can you tell me the couty I should be looking in?
+  - text: Would you mind telling me your county's name?
+  - text: Please, tell me your county's name?
+  - text: To help you find a facility_type I need to know your county.
+  utter_ask_self_harm_intent:
+  - text: Have you done anything to hurt yourself today?
+  - text: Did you hurt yourself?
+  - text: Are you thinking about hurting yourself?
+  utter_ask_suicide_intent:
+  - text: Are you thinking about killing yourself?
+  - text: Have you tried killing yourself?
+  utter_ask_cause:
+  - text: What is making your feel this way?
+  - text: Do you know why are feeling this way?
+  - text: What makes you feel that way?
+  utter_agree:
+  - text: Yes!
+  - text: I agree.
+  utter_short_term_safety:
+  - text: Do you have someone who can come keep you company?
+  - text: Is there someone close who can come stay with you for a moment?
+  utter_coping_mechanisms:
+  - text: What do you think can help you calm down?
+  - text: Is there something that usually helps?
+  - text: What do you usually do when you are feeling this way?
+  utter_come_back:
+  - text: This line is open 24/7. Feel free to reach out at any time you.
+  - text: Don't hesitate to reach out when you want. We are here to for you.
+  utter_listening_for_topic:
+  - text: I am listening....
+  - text: What do you want to talk about?
+  - text: What's up?
+  - text: I am here to talk with you.
+  utter_hotline_number:
+  - text: You can reach the HeadQuarters at 800-273-8255. The line is open available 24hrs/7days.
+  - text: The National Suicide Prevention Hotline Number is 800-273-8255. The line is open available 24hrs/7days.
+  utter_reflect_feeling:
+  - text: I hear that you are feeling {feeling}.
+  - text: It sounds like you are feeling {feeling}.
+  utter_custom_fallback:
+  - text: Sorry I didn't get that. Can you rephrase?
+  utter_default:
+  - text: I don't understand what you meant. How can I help you?
+  utter_how_to_help:
+  - text: How can I help you?
+  - text: Is there some way I can help you?
+  utter_reflect_important:
+  - text: It sounds like {important} is really important to you.
+  - text: It sounds like {important} really matters to you.
+  utter_reflect_values:
+  - text: It sounds like being {values} is really important to you.
+  - text: It sounds like being {values} really matters to you.
+  utter_closing_statement:
+  - text: |
+      Please, keep in mind that support is available 24hrs/7days. 
+      Feel free to call or text at any time.
+  utter_211_number:
+  - text: |
+      You can call UnitedWay at 211 and they will help you with finding 
+      food, shelter, jobs, psychiatrists, etc.
+  utter_ask_update_feeling:
+  - text: How are you feeling right compared to when we started texting?
+  utter_are_you_vet:
+  - text: |
+      To help me provide the right phone number, I'd like to know if you are a veteran.
+      Are you a veteran?
+  utter_veterans_line:
+  - text: |
+      Call 1-800-273-8255 and Press 1, chat from their website, or text 838255. 
+      They are available 24 hours 7 days.
+      The Veteran's crisis line website https://www.veteranscrisisline.net/. 
+  utter_human_handoff:
+  - text: |
+      If you need medical assistance, please call 911.
+      you can reach the HeadQuarters Counseling Center 24 hours 7 days at 785-841-2345
+      or the National Suicide Prevention Lifeline 800-273-8255 (TALK). 
+      Calls are free and confidential.
+      You can also get connected to the Crisis Text Line by texting KANSAS to 741 741.
+      The KSPHQ website is https://www.ksphq.org/help/
+actions:
+- action_default_fallback
+- action_reflect
+- action_search_facility
+- utter_greet

@@ -107,7 +107,7 @@ responses:
 
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-  - text: My name is JDG. I am not a human.
+  - text: My name is rasa bot. I am not a human.
   - text: I am an AI trained to help you.
 
   utter_ambivalence:

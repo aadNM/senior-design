@@ -1,0 +1,322 @@
+[
+  {
+    "text": "hey",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "suicide",
+      "confidence": 0.5833585262298584
+    }
+  },
+  {
+    "text": "have a nice day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "search_provider",
+      "confidence": 0.9410858750343323
+    }
+  },
+  {
+    "text": "correct",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "suicide",
+      "confidence": 0.32132381200790405
+    }
+  },
+  {
+    "text": "I am feeling very good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.7109403610229492
+    }
+  },
+  {
+    "text": "I am not okay",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "wanting_safety",
+      "confidence": 0.3873784840106964
+    }
+  },
+  {
+    "text": "I am homeless",
+    "intent": "search_provider",
+    "intent_prediction": {
+      "name": "wanting_safety",
+      "confidence": 0.3119470775127411
+    }
+  },
+  {
+    "text": "I only need to talk",
+    "intent": "want_to_talk",
+    "intent_prediction": {
+      "name": "search_provider",
+      "confidence": 0.8521074652671814
+    }
+  },
+  {
+    "text": "I feel like dying",
+    "intent": "suicide",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.9765098094940186
+    }
+  },
+  {
+    "text": "I don't want to kill myself",
+    "intent": "wanting_safety",
+    "intent_prediction": {
+      "name": "suicide",
+      "confidence": 0.9084766507148743
+    }
+  },
+  {
+    "text": "morning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.38696208596229553
+    }
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2778133153915405
+    }
+  },
+  {
+    "text": "good by",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.9693722724914551
+    }
+  },
+  {
+    "text": "indeed",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.9631998538970947
+    }
+  },
+  {
+    "text": "don't like that",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "suicide",
+      "confidence": 0.40674594044685364
+    }
+  },
+  {
+    "text": "super stoked",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.9323557019233704
+    }
+  },
+  {
+    "text": "I don't feel very well",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.9281443953514099
+    }
+  },
+  {
+    "text": "I want to rant",
+    "intent": "want_to_talk",
+    "intent_prediction": {
+      "name": "suicide",
+      "confidence": 0.6623286008834839
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.9253724217414856
+    }
+  },
+  {
+    "text": "y",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.4929627478122711
+    }
+  },
+  {
+    "text": "of course",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "suicide",
+      "confidence": 0.3221331238746643
+    }
+  },
+  {
+    "text": "I don't think so",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.4724106192588806
+    }
+  },
+  {
+    "text": "feeling like a king",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "suicide",
+      "confidence": 0.972335159778595
+    }
+  },
+  {
+    "text": "alone",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.21548305451869965
+    }
+  },
+  {
+    "text": "firghtened",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "search_provider",
+      "confidence": 0.7193477749824524
+    }
+  },
+  {
+    "text": "I don not have food",
+    "intent": "search_provider",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.8360688090324402
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.6304317116737366
+    }
+  },
+  {
+    "text": "n",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.3589852452278137
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "suicide",
+      "confidence": 0.42557838559150696
+    }
+  },
+  {
+    "text": "my day was horrible",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.9956154823303223
+    }
+  },
+  {
+    "text": "not good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3995627462863922
+    }
+  },
+  {
+    "text": "Can I chat with you?",
+    "intent": "want_to_talk",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.42312291264533997
+    }
+  },
+  {
+    "text": "I am tired of living",
+    "intent": "suicide",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.8195883631706238
+    }
+  },
+  {
+    "text": "I don't want to die",
+    "intent": "wanting_safety",
+    "intent_prediction": {
+      "name": "suicide",
+      "confidence": 0.6685053110122681
+    }
+  },
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "location_info",
+      "confidence": 0.5594125986099243
+    }
+  },
+  {
+    "text": "see you around",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "wanting_safety",
+      "confidence": 0.37505269050598145
+    }
+  },
+  {
+    "text": "yes",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.7022605538368225
+    }
+  },
+  {
+    "text": "never",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "suicide",
+      "confidence": 0.6915160417556763
+    }
+  },
+  {
+    "text": "not really",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.9998922348022461
+    }
+  },
+  {
+    "text": "extremely good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.82734215259552
+    }
+  },
+  {
+    "text": "I want to kill myself",
+    "intent": "suicide",
+    "intent_prediction": {
+      "name": "wanting_safety",
+      "confidence": 0.9869962930679321
+    }
+  }
+]

@@ -1,0 +1,664 @@
+[
+  {
+    "text": "have a nice day",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "mood_type",
+        "start": 12,
+        "end": 15,
+        "confidence_entity": 0.6858000159263611,
+        "value": "day",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "great",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "great",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I am feeling very good",
+    "entities": [
+      {
+        "start": 13,
+        "end": 22,
+        "value": "very good",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mood_type",
+        "start": 5,
+        "end": 22,
+        "confidence_entity": 0.4326006770133972,
+        "value": "feeling very good",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I am great",
+    "entities": [
+      {
+        "start": 5,
+        "end": 10,
+        "value": "great",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I'm okay",
+    "entities": [
+      {
+        "start": 4,
+        "end": 8,
+        "value": "okay",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I feel great",
+    "entities": [
+      {
+        "start": 7,
+        "end": 12,
+        "value": "great",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mood_type",
+        "start": 2,
+        "end": 12,
+        "confidence_entity": 0.4876094162464142,
+        "value": "feel great",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I am not okay",
+    "entities": [
+      {
+        "start": 5,
+        "end": 13,
+        "value": "not okay",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Mission County",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "Mission County",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "location",
+        "start": 8,
+        "end": 14,
+        "confidence_entity": 0.9308255314826965,
+        "value": "County",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I am homeless",
+    "entities": [
+      {
+        "start": 5,
+        "end": 13,
+        "value": "homeless",
+        "entity": "service_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mood_type",
+        "start": 5,
+        "end": 13,
+        "confidence_entity": 0.46886157989501953,
+        "value": "homeless",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I need a doctor",
+    "entities": [
+      {
+        "start": 9,
+        "end": 15,
+        "value": "doctor",
+        "entity": "professional_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "service_type",
+        "start": 9,
+        "end": 15,
+        "confidence_entity": 0.9786746501922607,
+        "value": "doctor",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "good by",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "mood_type",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.47636476159095764,
+        "value": "good",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I am enjoying my day",
+    "entities": [
+      {
+        "start": 5,
+        "end": 13,
+        "value": "enjoying",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mood_type",
+        "start": 17,
+        "end": 20,
+        "confidence_entity": 0.6376943588256836,
+        "value": "day",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I don't feel very well",
+    "entities": [
+      {
+        "start": 0,
+        "end": 22,
+        "value": "I don't feel very well",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mood_type",
+        "start": 13,
+        "end": 22,
+        "confidence_entity": 0.5933831930160522,
+        "value": "very well",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Kansas City",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "Kansas City",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I need psychiatrist",
+    "entities": [
+      {
+        "start": 7,
+        "end": 19,
+        "value": "psychiatrist",
+        "entity": "professional_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I need a therapist",
+    "entities": [
+      {
+        "start": 9,
+        "end": 18,
+        "value": "therapist",
+        "entity": "professional_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "help me find a doctor in Lawrence",
+    "entities": [
+      {
+        "start": 15,
+        "end": 21,
+        "value": "doctor",
+        "entity": "service_type"
+      },
+      {
+        "start": 25,
+        "end": 33,
+        "value": "Lawrence",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "professional_type",
+        "start": 15,
+        "end": 21,
+        "confidence_entity": 0.9785850048065186,
+        "value": "doctor",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "location",
+        "start": 25,
+        "end": 33,
+        "confidence_entity": 0.9914804697036743,
+        "value": "Lawrence",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I don't think so",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "mood_type",
+        "start": 14,
+        "end": 16,
+        "confidence_entity": 0.6052026748657227,
+        "value": "so",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "feeling like a king",
+    "entities": [
+      {
+        "start": 0,
+        "end": 19,
+        "value": "feeling like a king",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "It is a beautiful day",
+    "entities": [
+      {
+        "start": 8,
+        "end": 21,
+        "value": "beautiful day",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "alone",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "alone",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "concerned",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "concerned",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "firghtened",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "firghtened",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I live in Kansas City",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "location",
+        "start": 10,
+        "end": 21,
+        "confidence_entity": 0.8384491801261902,
+        "value": "Kansas City",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Where is the Community Mental Health Center",
+    "entities": [
+      {
+        "start": 13,
+        "end": 43,
+        "value": "Community Mental Health Center",
+        "entity": "facility_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mood_type",
+        "start": 9,
+        "end": 12,
+        "confidence_entity": 0.8509666323661804,
+        "value": "the",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I don not have food",
+    "entities": [
+      {
+        "start": 15,
+        "end": 19,
+        "value": "food",
+        "entity": "service_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mood_type",
+        "start": 6,
+        "end": 9,
+        "confidence_entity": 0.5218878984451294,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "service_type",
+        "start": 15,
+        "end": 19,
+        "confidence_entity": 0.9837247133255005,
+        "value": "food",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I need a job",
+    "entities": [
+      {
+        "start": 9,
+        "end": 12,
+        "value": "job",
+        "entity": "service_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "that sounds good",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "mood_type",
+        "start": 12,
+        "end": 16,
+        "confidence_entity": 0.5065681338310242,
+        "value": "good",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I am going to save the world",
+    "entities": [
+      {
+        "start": 0,
+        "end": 28,
+        "value": "I am going to save the world",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mood_type",
+        "start": 23,
+        "end": 28,
+        "confidence_entity": 0.45224854350090027,
+        "value": "world",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "This is a good day",
+    "entities": [
+      {
+        "start": 10,
+        "end": 18,
+        "value": "good day",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "my day was horrible",
+    "entities": [
+      {
+        "start": 11,
+        "end": 19,
+        "value": "horrible",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "not good",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "not good",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mood_type",
+        "start": 4,
+        "end": 8,
+        "confidence_entity": 0.48435699939727783,
+        "value": "good",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "New York",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "New York",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "location",
+        "start": 4,
+        "end": 8,
+        "confidence_entity": 0.4470118284225464,
+        "value": "York",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Overland Park",
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "value": "Overland Park",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Find me a nearby hospital",
+    "entities": [
+      {
+        "start": 17,
+        "end": 25,
+        "value": "hospital",
+        "entity": "facility_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I need a hospital",
+    "entities": [
+      {
+        "start": 9,
+        "end": 17,
+        "value": "hospital",
+        "entity": "facility_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I need a place to stay",
+    "entities": [
+      {
+        "start": 18,
+        "end": 22,
+        "value": "stay",
+        "entity": "facility_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "they will be better without me",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "mood_type",
+        "start": 13,
+        "end": 19,
+        "confidence_entity": 0.9511919021606445,
+        "value": "better",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "not really",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "mood_type",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9806312322616577,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mood_type",
+        "start": 4,
+        "end": 10,
+        "confidence_entity": 0.4492636024951935,
+        "value": "really",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "violated",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "violated",
+        "entity": "mood_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Shelby County",
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "value": "Shelby County",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "location",
+        "start": 7,
+        "end": 13,
+        "confidence_entity": 0.9930330514907837,
+        "value": "County",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

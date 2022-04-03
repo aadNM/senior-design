@@ -1,0 +1,156 @@
+version: "2.0"
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - slot_was_set:
+    - is_happy: true
+  - action: action_reflect
+- story: Story from Conversation ID 000
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+    entities:
+    - feeling: sad
+  - slot_was_set:
+    - feeling: sad
+    - is_happy: false
+  - action: utter_reflect_feeling
+  - intent: resource_inquiry
+    entities:
+      - resource_type: hotline
+  - slot_was_set:
+    - feeling: sad
+    - is_happy: false
+  - action: utter_hotline_number
+- story: Story from Conversation ID 001
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+    entities:
+    - feeling: I am
+    - feeling: not feeling well
+  - slot_was_set:
+    - feeling: not feeling well
+  - action: utter_reflect_feeling
+- story: Story from Conversation ID 002
+  steps:
+  - intent: mood_great
+  - slot_was_set:
+    - is_happy: true
+  - action: action_reflect
+  - action: utter_how_to_help
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+    entities:
+    - feeling: great
+  - slot_was_set:
+    - feeling: great
+    - is_happy: true
+  - action: action_reflect
+  - intent: need_help
+  - action: utter_how_to_help
+  - intent: resource_inquiry
+  - action: utter_211_number
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_closing_statement
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+    entities:
+    - feeling: very sad
+  - slot_was_set:
+    - feeling: very sad
+    - is_happy: false
+  - action: utter_reflect_feeling
+  - intent: suicide
+  - action: utter_ask_suicide_intent
+  - intent: affirm
+  - action: utter_ambivalence
+  - intent: affirm
+  - action: utter_ask_cause
+  - intent: coping_techniques
+  - action: utter_coping_mechanisms
+  - intent: importants
+    entities:
+    - important: family
+    - important: family
+  - slot_was_set:
+    - important: family
+  - action: utter_reflect_important
+  - intent: affirm
+  - action: utter_ask_suicide_intent
+  - intent: deny
+  - action: utter_come_back
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: when they actually feel bad
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_happy
+  - slot_was_set:
+    - is_happy: true
+  - action: action_reflect
+  - action: utter_how_to_help
+  - intent: mood_unhappy
+  - slot_was_set:
+    - is_happy: false
+  - action: utter_reflect_feeling
+  - intent: suicide
+  - action: utter_ask_suicide_intent
+  - intent: affirm
+  - action: utter_ambivalence
+  - intent: affirm
+  - action: utter_coping_mechanisms
+
+- story: Do not go for chitchat
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_happy
+  - slot_was_set:
+    - is_happy: true
+  - action: action_reflect
+  - action: utter_how_to_help
+  - intent: chitchat
+  - action: utter_closing_statement
+
+- story: transfer to a human
+  steps:
+  - intent: human_handoff
+  - action: utter_are_you_vet
+  - intent: deny
+  - action: utter_human_handoff
+
+- story: Request for veteran's line
+  steps:
+  - intent: human_handoff
+  - action: utter_are_you_vet
+  - intent: affirm
+  - action: utter_veterans_line
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+    entities:
+    - feeling: perfect
+  - slot_was_set:
+    - feeling: perfect
+  - action: action_reflect

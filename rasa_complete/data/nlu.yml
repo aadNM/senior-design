@@ -1,0 +1,269 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - morning
+    - good morning
+    - good evening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yes, thank you
+    - true. I want to live.
+    - yes, they make me happy.
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: thank_you
+  examples: |
+    - thank you
+    - thanks
+    - I appreciate
+    - thx
+    - thank you!
+- intent: mood_great
+  examples: |
+    - [perfect](feeling)
+    - [great](feeling)
+    - I am [good](feeling)
+    - [amazing](feeling)
+    - feeling [like a king](feeling)
+    - [wonderful](feeling)
+    - I am feeling [very good](feeling)
+    - I am [great](feeling)
+    - I am [amazing](feeling)
+    - I am going to save the world
+    - [super stoked](feeling)
+    - [extremely good](feeling)
+    - [so so perfect](feeling)
+    - [so good](feeling)
+    - [so perfect](feeling)
+    - I feel [good](feeling)
+    - I'm [good](feeling)
+    - I'm [okay](feeling)
+    - My day is [going well](feeling)
+    - I feel [great](feeling)
+    - This is a [good day](feeling)
+    - It is a [beautiful day](feeling)
+    - I am [enjoying](feeling) my day
+    - I am [fine](feeling)
+    - I am fine.
+    - [perfect](feeling)
+- intent: mood_unhappy
+  examples: |
+    - my day was [horrible](feeling)
+    - I am [sad](feeling)
+    - [I don't feel very well](feeling)
+    - I am [disappointed](feeling)
+    - [super sad](feeling)
+    - I'm [so sad](feeling)
+    - [sad](feeling)
+    - [very sad](feeling)
+    - [unhappy](feeling)
+    - [not good](feeling)
+    - [not very good](feeling)
+    - [extremly sad](feeling)
+    - [so saad](feeling)
+    - [so sad](feeling)
+    - [angry](feeling)
+    - [stressed](feeling)
+    - [depressed](feeling)
+    - [so mad](feeling)
+    - [mad](feeling)
+    - [fucking angry](feeling)
+    - [lonely](feeling)
+    - [alone](feeling)
+    - [insulted](feeling)
+    - [ashamed](feeling)
+    - [violated](feeling)
+    - [worried](feeling)
+    - [scared](feeling)
+    - [concerned](feeling)
+    - [firghtened](feeling)
+    - [anxious](feeling)
+    - I am [not okay](feeling)
+    - I am [angry](feeling)
+    - [I am](feeling) [not feeling well](feeling)
+    - I feel [terrible](feeling)
+    - I am [very sad](feeling)
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - are you a man?
+    - What is your gender?
+- intent: location_info
+  examples: |
+    - [Lawrence](location)
+    - [Kansas](location)
+    - [Wyandotte County](location)
+    - [Kansas City](location)
+    - [KC](location)
+    - [Wichita](location)
+    - [Douglas County](location)
+    - [Jefferson County](location)
+    - [Manhattan](location)
+    - [Topeka](location)
+    - [Missouri](location)
+    - [Colorado](location)
+    - [Nebraska](location)
+    - [Illinois](location)
+    - [New York](location)
+    - [Georgia](location)
+    - [County](location)
+    - [Shelby County](location)
+    - [Overland Park](location)
+    - [Mission County](location)
+    - [Ottawa](location)
+    - [Oklahoma](location)
+    - I live in Kansas City
+- intent: resource_inquiry
+  examples: |
+    - What is the [hotline]'s number?(resource_type)
+    - what is the hotline's number?
+    - What is the suicide preventio hotline number?
+    - I don not have [food](resource_type)
+    - I need [food](resource_type)
+    - I need a [job](resource_type)
+    - I need a place to [stay](resource_type)
+- intent: search_provider
+  examples: |
+    - Find me a nearby [hospital](facility_type)
+    - Where is the [Community Mental Health Center](facility_type)
+    - I am [homeless](service_type)
+    - I need a [hospital](facility_type)
+    - I need a [counselor](professional_type)
+    - I need [psychiatrist](professional_type)
+    - I need a [doctor](professional_type)
+    - I need a [therapist](professional_type)
+    - help me find a [doctor](service_type) in [Lawrence](location)
+- intent: want_to_talk
+  examples: |
+    - I want someone to talk to
+    - I need to speak to someone
+    - I just want to talk
+    - I only need to talk
+    - I want to rant
+    - I just want some comapany
+    - Can I chat with you?
+- intent: suicide
+  examples: |
+    - I want to die
+    - I feel like dying
+    - I don't want to be here anymore
+    - I want to sleep and never wake up
+    - I am tired of living
+    - I don't want to do this anymore
+    - they will be better without me
+    - I want to end it
+    - I want to end this
+    - I can't take it anymore
+    - I want to kill myself
+    - I wish I was dead
+    - I just can't take it anymore
+    - They'll be sorry when I'm gone
+    - I want to go to sleep forever
+    - yes, I can't do this anymore.
+- intent: not_wanting_safety
+  examples: |
+    - I dont want to be safe
+    - I don't have a reason to live
+    - I don't want to live
+    - I have no reason to be alive
+- intent: wanting_safety
+  examples: |
+    - I don't want to kill myself
+    - I don't want to do it
+    - I want to be safe
+    - I wanna be safe
+    - How can I be safe
+    - I don't want to cut
+    - I don't want to die
+    - I don't want to hurt myself
+    - I am trying to be safe
+- intent: self_harm
+  examples: |
+    - I want to cut
+    - I want to feel something
+    - I am thinking about hurting myself
+    - I am thinking about cutting myself
+- intent: coping_techniques
+  examples: |
+    - I usually listen to [music](coping) or paint
+    - I watch [TV](coping) when I am stressed
+    - [talking to people](coping) helps me
+    - I like to [go for a ride](coping)
+    - [Painting](coping) calms me down
+- intent: need_help
+  examples: |
+    - Can you help me?
+    - I need help
+    - Please, help me
+- intent: importants
+  examples: |
+    - [family](important) is importanat to me
+    - I love my [mother](important)
+    - I can't live without my [husband](important)
+    - My [job](important) is everything
+    - I like [volunteering](important)
+    - I love [cars](important)
+    - I like listening to music. I also life being with my [family](important). I love my [family](important)
+    - I value [people's opinion](important)
+- intent: values
+  examples: |
+    - people should be [honest](value)
+    - I want to be [independant](value)
+    - [freedom](value) is what I value
+- intent: human_handoff
+  examples: |
+    - I want to talk to a person
+    - How can I talk to a human?
+    - Can you transfer me to a human
+    - Is there an actual person I can speak with
+    - transfer me to a human
+- intent: chitchat
+  examples: |
+    - do you know who won the game?
+    - what is an atom?
+    - who is the president?
+    - can you say the n-word
+    - can you say an insult
+    - are you racist
+    - do you trust asians
+    - women are horrible, right?
+    - do wan to go for a date
+    - I want to go to hawaii
+- intent: insult
+  examples: |
+    - fuck you
+    - go to hell
+    - screw you
