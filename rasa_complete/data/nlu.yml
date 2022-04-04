@@ -75,7 +75,7 @@ nlu:
     - I am [enjoying](feeling) my day
     - I am [fine](feeling)
     - I am fine.
-    - [perfect](feeling)
+    - I feel [good](feeling)
 - intent: mood_unhappy
   examples: |
     - my day was [horrible](feeling)
@@ -166,6 +166,7 @@ nlu:
     - I need a [doctor](professional_type)
     - I need a [therapist](professional_type)
     - help me find a [doctor](service_type) in [Lawrence](location)
+    - I need a [doctor](professional_type)
 - intent: want_to_talk
   examples: |
     - I want someone to talk to
@@ -174,7 +175,7 @@ nlu:
     - I only need to talk
     - I want to rant
     - I just want some comapany
-    - Can I chat with you?
+    - Can I chat with you
 - intent: suicide
   examples: |
     - I want to die
@@ -246,7 +247,7 @@ nlu:
 - intent: human_handoff
   examples: |
     - I want to talk to a person
-    - How can I talk to a human?
+    - How can I talk to a human
     - Can you transfer me to a human
     - Is there an actual person I can speak with
     - transfer me to a human

@@ -25,7 +25,7 @@ class ActionSearchFacility(Action):
 
         facility = tracker.get_slot("facility_type")
         address = "300 Hyde St, San Fransisco"
-        dispatcher.utter_message(text="Here is the address of {}:{}".format(facility, address))
+        dispatcher.utter_message(response="Here is the address of {}:{}".format(facility, address))
 
         return [SlotSet("address", address)]
 
@@ -40,8 +40,8 @@ class ActionReflect(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # next(tracker.get_latest_entity_values(mood_type), None)
 
-        dispatcher.utter_message(Text="utter_happy")
-        print("inside function")
+        dispatcher.utter_message(response="utter_happy")
+        # print("inside function")
 
         return []
 
@@ -57,7 +57,7 @@ class ActionDefaultFallback(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(template="utter_custom_fallback")
+        dispatcher.utter_message(response="utter_custom_fallback")
 
         # Revert user message which led to fallback.
         return [UserUtteranceReverted()]

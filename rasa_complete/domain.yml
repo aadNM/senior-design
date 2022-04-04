@@ -31,17 +31,18 @@ intents:
 - suicide
 - thank_you
 - thanks
+- tool
 - values
 - want_to_talk
 - wanting_safety
 - willing_for_safety
 entities:
+- professional_type
 - feeling
 - coping
 - important
 - location
 - facility_type
-- professional_type
 - service_type
 - location"
 - location:Lawrence
@@ -51,68 +52,39 @@ slots:
   feeling:
     type: text
     influence_conversation: true
-    # mappings:
-    # - type: from_entity
-    #   entity: feeling
   important:
     type: text
     influence_conversation: true
-    # mappings:
-    # - type: from_entity
-    #   entity: important
   values:
     type: text
     influence_conversation: true
-    # mappings:
-    # - type: from_entity
-    #   entity: value
   coping:
     type: text
     influence_conversation: false
-    # mappings:
-    # - type: from_entity
-    #   entity: coping
   is_happy:
     type: bool
     influence_conversation: true
-    # mappings:
-    # - type: custom
   is_suicidal:
     type: bool
     initial_value: false
     influence_conversation: true
-    # mappings:
-    # - type: custom
   suicide:
     type: text
     influence_conversation: true
-    # mappings:
-    # - type: from_text
-    #   entity: suicide
   self_harm:
     type: text
     influence_conversation: true
-    # mappings:
-    # - type: from_text
-    #   entity: self_harm
   is_cutting:
     type: bool
     initial_value: false
     influence_conversation: true
-    # mappings:
-    # - type: custom
   tool:
     type: text
     influence_conversation: true
-    # mappings:
-    # - type: from_intent
-    #   entity: tool
   near_tool:
     type: bool
     initial_value: false
     influence_conversation: true
-    # mappings:
-    # - type: custom
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -254,7 +226,6 @@ responses:
   utter_ask_if_onsight:
   - text: Is the {tool} you want use near you?
   - text: Is the {tool} near you?
-
 actions:
 - action_default_fallback
 - action_reflect

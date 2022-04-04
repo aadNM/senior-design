@@ -8,6 +8,7 @@ stories:
   - slot_was_set:
     - is_happy: true
   - action: action_reflect
+
 - story: Story from Conversation ID 000
   steps:
   - intent: greet
@@ -26,6 +27,7 @@ stories:
     - feeling: sad
     - is_happy: false
   - action: utter_hotline_number
+
 - story: Story from Conversation ID 001
   steps:
   - intent: greet
@@ -37,6 +39,7 @@ stories:
   - slot_was_set:
     - feeling: not feeling well
   - action: utter_reflect_feeling
+
 - story: Story from Conversation ID 002
   steps:
   - intent: mood_great
@@ -144,6 +147,7 @@ stories:
   - action: utter_are_you_vet
   - intent: affirm
   - action: utter_veterans_line
+
 - story: interactive_story_1
   steps:
   - intent: greet
@@ -154,3 +158,20 @@ stories:
   - slot_was_set:
     - feeling: perfect
   - action: action_reflect
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+    entities:
+    - feeling: good
+  - slot_was_set:
+    - feeling: good
+  - action: action_reflect
+  - intent: search_provider
+    entities:
+    - professional_type: doctor
+  - action: action_search_facility
+  - slot_was_set:
+    - address: 300 Hyde St, San Fransisco
