@@ -1,33 +1,26 @@
 version: "2.0"
 rules:
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
 - rule: Welcome user
   conversation_start: true
   steps:
   - intent: greet
   - action: utter_greet
 
-- rule: reflect feeling bad
+- rule: greet
   steps:
-  - intent: mood_unhappy
-  - slot_was_set:
-    - is_happy: false
-  - action: utter_reflect_feeling
-- rule: reflect value
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
   steps:
-  - intent: values
-  - action: utter_reflect_values
-- rule: reflect important
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
   steps:
-  - intent: importants
-  - action: utter_reflect_important
+  - intent: bot_challenge
+  - action: utter_iamabot
+
 - rule: reflect feeling good
   steps:
   - intent: mood_happy
@@ -35,16 +28,7 @@ rules:
     - is_happy: true
   - action: action_reflect
   - action: utter_how_to_help
-- rule: provide hotline number
-  steps:
-  - intent: resource_inquiry
-    entities:
-    - resource_type: hotline
-  - action: utter_hotline_number
-- rule: greet
-  steps:
-  - intent: greet
-  - action: utter_greet
+
 - rule: ask how to help if feeling good
   steps:
   - intent: mood_happy
@@ -52,14 +36,7 @@ rules:
     - is_happy: true
   - action: action_reflect
   - action: utter_how_to_help
-- rule: Ask how to help if needed
-  steps:
-  - intent: need_help
-  - action: utter_how_to_help
-- rule: ask how to help when wanna talk
-  steps:
-  - intent: want_to_talk
-  - action: utter_how_to_help
+
 - rule: provide 211 number
   steps:
   - intent: resource_inquiry
@@ -67,3 +44,40 @@ rules:
     - is_happy: true
   - action: utter_211_number
   - action: utter_did_that_help
+
+- rule: provide hotline number
+  steps:
+  - intent: resource_inquiry
+    entities:
+    - resource_type: hotline
+  - action: utter_hotline_number
+
+- rule: reflect value
+  steps:
+  - intent: values
+  - action: utter_reflect_values
+
+- rule: reflect important
+  steps:
+  - intent: importants
+  - action: utter_reflect_important
+
+
+- rule: Ask how to help if needed
+  steps:
+  - intent: need_help
+  - action: utter_how_to_help
+
+- rule: ask how to help when wanna talk
+  steps:
+  - intent: want_to_talk
+  - action: utter_how_to_help
+
+- rule: reflect feeling bad
+  steps:
+  - intent: mood_unhappy
+  - slot_was_set:
+    - is_happy: false
+  - action: utter_reflect_feeling
+
+

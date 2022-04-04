@@ -267,3 +267,12 @@ nlu:
     - fuck you
     - go to hell
     - screw you
+- intent: tool
+  examples: |
+    - knife
+    - gun
+    - pen
+    - pencil
+    - razor
+    - glass
+    - rope

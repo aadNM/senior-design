@@ -51,18 +51,68 @@ slots:
   feeling:
     type: text
     influence_conversation: true
+    # mappings:
+    # - type: from_entity
+    #   entity: feeling
   important:
     type: text
     influence_conversation: true
+    # mappings:
+    # - type: from_entity
+    #   entity: important
   values:
     type: text
     influence_conversation: true
+    # mappings:
+    # - type: from_entity
+    #   entity: value
   coping:
     type: text
     influence_conversation: false
+    # mappings:
+    # - type: from_entity
+    #   entity: coping
   is_happy:
     type: bool
     influence_conversation: true
+    # mappings:
+    # - type: custom
+  is_suicidal:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+    # mappings:
+    # - type: custom
+  suicide:
+    type: text
+    influence_conversation: true
+    # mappings:
+    # - type: from_text
+    #   entity: suicide
+  self_harm:
+    type: text
+    influence_conversation: true
+    # mappings:
+    # - type: from_text
+    #   entity: self_harm
+  is_cutting:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+    # mappings:
+    # - type: custom
+  tool:
+    type: text
+    influence_conversation: true
+    # mappings:
+    # - type: from_intent
+    #   entity: tool
+  near_tool:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+    # mappings:
+    # - type: custom
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -117,13 +167,6 @@ responses:
   - text: Would you mind telling me your county's name?
   - text: Please, tell me your county's name?
   - text: To help you find a facility_type I need to know your county.
-  utter_ask_self_harm_intent:
-  - text: Have you done anything to hurt yourself today?
-  - text: Did you hurt yourself?
-  - text: Are you thinking about hurting yourself?
-  utter_ask_suicide_intent:
-  - text: Are you thinking about killing yourself?
-  - text: Have you tried killing yourself?
   utter_ask_cause:
   - text: What is making your feel this way?
   - text: Do you know why are feeling this way?
@@ -192,6 +235,26 @@ responses:
       Calls are free and confidential.
       You can also get connected to the Crisis Text Line by texting KANSAS to 741 741.
       The KSPHQ website is https://www.ksphq.org/help/
+  utter_ask_suicide_intent:
+  - text: When you say {suicide}, I wonder if you are thinking about killing yourself. Are you?
+  - text: Are you thinking about killing yourself?
+  utter_ask_self_harm_intent:
+  - text: Are you thinking about cutting yourself?
+  - text: Are you thinking about hurting yourself?
+  - text: When you say {self_harm}, I wonder if you are thinking about killing yourself. Are you?
+  utter_ask_cut_attempt:
+  - text: Have you done anything to hurt yourself today?
+  - text: Did you hurt yourself?
+  utter_ask_suicide_attempt:
+  - text: Have you tried killing yourself?
+  utter_ask_suicide_plan:
+  - text: Do you have plan for killing yourself?
+  - text: Did you think of a way to kill yourself?
+  - text: Are you thinking of a plan to kill yourself?
+  utter_ask_if_onsight:
+  - text: Is the {tool} you want use near you?
+  - text: Is the {tool} near you?
+
 actions:
 - action_default_fallback
 - action_reflect
