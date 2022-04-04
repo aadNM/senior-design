@@ -41,7 +41,6 @@ class ActionReflect(Action):
         # next(tracker.get_latest_entity_values(mood_type), None)
 
         dispatcher.utter_message(response="utter_happy")
-        # print("inside function")
 
         return []
 

@@ -44,7 +44,6 @@ entities:
 - location
 - facility_type
 - service_type
-- location"
 - location:Lawrence
 - resource_type
 - value
@@ -85,6 +84,12 @@ slots:
     type: bool
     initial_value: false
     influence_conversation: true
+  location:
+    type: text
+    influence_conversation: true
+  address:
+    type: text
+    influence_conversation: false
 responses:
   utter_greet:
   - text: Hey! How are you?
