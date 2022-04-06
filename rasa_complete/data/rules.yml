@@ -3,6 +3,7 @@ rules:
 - rule: Welcome user
   conversation_start: true
   steps:
+  - action: utter_state_case_of_emergency
   - intent: greet
   - action: utter_greet
 
@@ -38,19 +39,19 @@ rules:
   - action: utter_how_to_help
 
 - rule: provide 211 number
+
   steps:
   - intent: resource_inquiry
-  - slot_was_set:
-    - is_happy: true
   - action: utter_211_number
+  - action: utter_local_resouces
   - action: utter_did_that_help
 
-- rule: provide hotline number
-  steps:
-  - intent: resource_inquiry
-    entities:
-    - resource_type: hotline
-  - action: utter_hotline_number
+# - rule: provide hotline number
+#   steps:
+#   - intent: resource_inquiry
+#     entities:
+#     - resource_type: hotline
+#   - action: utter_hotline_number
 
 - rule: reflect value
   steps:
@@ -80,4 +81,7 @@ rules:
     - is_happy: false
   - action: utter_reflect_feeling
 
-
+- rule: ask if suicidal
+  steps:
+  - intent: suicide
+  - action: utter_ask_suicide_intent

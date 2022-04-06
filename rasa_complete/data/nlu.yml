@@ -110,9 +110,9 @@ nlu:
     - [anxious](feeling)
     - I am [not okay](feeling)
     - I am [angry](feeling)
-    - [I am](feeling) [not feeling well](feeling)
+    - I am [trapped](feeling)
     - I feel [terrible](feeling)
-    - I am [very sad](feeling)
+    - [hopeless](feeling)
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -148,25 +148,26 @@ nlu:
     - I live in Kansas City
 - intent: resource_inquiry
   examples: |
-    - What is the [hotline]'s number?(resource_type)
-    - what is the hotline's number?
-    - What is the suicide preventio hotline number?
     - I don not have [food](resource_type)
     - I need [food](resource_type)
     - I need a [job](resource_type)
+    - I am [homeless](resource_type)
     - I need a place to [stay](resource_type)
+- synonym: CMHC
+  - community mental health center
+  - Mental Health place
+  - Community Mental Health Center
+  - mental health facility
+  - mental health place
 - intent: search_provider
   examples: |
     - Find me a nearby [hospital](facility_type)
     - Where is the [Community Mental Health Center](facility_type)
-    - I am [homeless](service_type)
     - I need a [hospital](facility_type)
     - I need a [counselor](professional_type)
     - I need [psychiatrist](professional_type)
-    - I need a [doctor](professional_type)
     - I need a [therapist](professional_type)
-    - help me find a [doctor](service_type) in [Lawrence](location)
-    - I need a [doctor](professional_type)
+    - help me find a [therapist](professional_type) in [Lawrence](location)
 - intent: want_to_talk
   examples: |
     - I want someone to talk to
@@ -251,6 +252,9 @@ nlu:
     - Can you transfer me to a human
     - Is there an actual person I can speak with
     - transfer me to a human
+     - What is the [hotline]'s number?(resource_type)
+    - what is the hotline's number?
+    - What is the suicide preventio hotline number?
 - intent: chitchat
   examples: |
     - do you know who won the game?
@@ -268,7 +272,7 @@ nlu:
     - fuck you
     - go to hell
     - screw you
-- intent: tool
+- intent: tools
   examples: |
     - knife
     - gun
@@ -277,3 +281,41 @@ nlu:
     - razor
     - glass
     - rope
+- intent: suicide_method_1
+  examples: |
+  - I cut myself
+  - I used a knife
+  - I shot myself
+  - I drowned myself
+  - I bruned myself
+  - I hung myself
+- intent: suicide_method_2
+  examples: |
+  - I swallowed pills
+  - I took drugs
+  - I took sleeping pills
+  - I overdosed
+  - I injected myself
+- intent: time
+  examples: |
+    - 30 minutes ago
+    - an hour ago
+    - 6 hours ago
+    - 8 hours ago
+    - 10 hours ago
+    - it's been 4 hours
+    - it has been 7 hours
+    - around 2 pm
+    - in the morning
+    - a moment ago
+- intent: drug_type
+  examples: |
+  - sleeping pills
+  - anxiety medecine
+- intent: hospital_distance
+  examples: |
+    - a mile away
+    - 2 blocks
+    - 1 mile
+    - 4 miles away
+    - 10 miles away

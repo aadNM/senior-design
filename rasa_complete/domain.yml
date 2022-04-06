@@ -29,9 +29,11 @@ intents:
 - search_provider
 - self_harm
 - suicide
+- suicide_method_1
+- suicide_method_2
 - thank_you
 - thanks
-- tool
+- tools
 - values
 - want_to_talk
 - wanting_safety
@@ -77,10 +79,10 @@ slots:
     type: bool
     initial_value: false
     influence_conversation: true
-  tool:
+  tools:
     type: text
     influence_conversation: true
-  near_tool:
+  is_onsight:
     type: bool
     initial_value: false
     influence_conversation: true
@@ -89,6 +91,30 @@ slots:
     influence_conversation: true
   address:
     type: text
+    influence_conversation: false
+  time:
+    type: text  
+    influence_conversation: true
+  injuri_description:
+    type: text  
+    influence_conversation: false
+  currently_bleeding:
+    type: bool  
+    influence_conversation: true
+  is_critical:
+    type: bool  
+    influence_conversation: true
+  additional_drugs:
+    type: text  
+    influence_conversation: false
+  drug_type:
+    type: text  
+    influence_conversation: false
+  is_prescribed:
+    type: bool  
+    influence_conversation: false
+  hospital_distance:
+    type: text  
     influence_conversation: false
 responses:
   utter_greet:
@@ -131,15 +157,10 @@ responses:
       But you are reached out. That tell me that there is a part of you
       that believes there is another way than killing yourself.
       I am here to help you with both.
-  utter_stay_away:
-  - text: Would you mind stepping away from the tools you are using.
-  - text: Is it possible for you to be in a different room where you can't see it.
-  - text: It would be great if you don't touch it, but just be in a different room.
   utter_ask_location:
   - text: Do you mind telling me where you are right now?
   - text: It would be easier for me to help you, if I know your location.
   - text: Which county are you in?
-  - text: Do you live in Kansas?
   - text: Can you tell me the couty I should be looking in?
   - text: Would you mind telling me your county's name?
   - text: Please, tell me your county's name?
@@ -151,9 +172,23 @@ responses:
   utter_agree:
   - text: Yes!
   - text: I agree.
+  utter_safety_plan:
+  - text: |
+    I would like for you to be safe. Let's make a short and a long term safety plans.
+    A short term plan could be
+    - staying away from things that you can use to hurt yourself or others. 
+    - And/or having a person you trust come stay with you for a while.
+    - And/or oing something that helps you calm down and feel happy.
+    Basically anything that can help you be safe right now.
+    
+    A long term plan could be
+    - Talking with a professional. I can give links to sites where you can search for one.
+    - And/or Using your support group,  if you have one.
+    It is all about building a mechanism that helps you stay safe.
   utter_short_term_safety:
-  - text: Do you have someone who can come keep you company?
-  - text: Is there someone close who can come stay with you for a moment?
+  - text: Do you think that you have a short term plan?
+  utter_long_term_safety:
+  - text: Do you think that you have a long term plan?
   utter_coping_mechanisms:
   - text: What do you think can help you calm down?
   - text: Is there something that usually helps?
@@ -228,11 +263,79 @@ responses:
   - text: Do you have plan for killing yourself?
   - text: Did you think of a way to kill yourself?
   - text: Are you thinking of a plan to kill yourself?
-  utter_ask_if_onsight:
-  - text: Is the {tool} you want use near you?
-  - text: Is the {tool} near you?
+  utter_ask_is_onsight:
+  - text: Is the {tools} you want use near you?
+  - text: Is the {tools} near you?
+  utter_stay_away:
+  - text: Would you mind stepping away from the {tools} ?.
+  - text: Is it possible for you to be in a different room where you can't see it?
+  - text: It would be great if you don't touch it, but just be in a different room.
+  utter_state_case_of_emergency:
+  - text: |
+    Before we go further: If you need immediate care, please call your 911, your
+    local police department, or the hospital closest to you. I can help you locate
+    those resources if you tell me the name of your county or town.
+    If you are in a critical condition, please help me get you to safety. I will
+    need to know your current town to give you a list of ressources or call one 
+    on your request.
+  utter_ask_tools:
+  - text: What did you use?
+  utter_ask_time:
+  - text: How long has it been since you did that?
+  utter_ask_injuri_description:
+  - text: Can describe your current physical state?
+  utter_ask_currently_bleeding:
+  - text: Are you currently bleeding?
+  utter_ask_is_critical:
+  - text: Are feeling dizzy, lightheaded, nauseated, or someway of the kind?
+  utter_ask_additional_drugs:
+  - text: Have you had any drugs, alcohol, or another substance?
+  utter_lfk_resouces:
+  - text: |
+      You can find resources at the following links
+      local_resources.pdf
+  utter_lfk_comm:
+  - text: You can find more on the following document lawrence-community-resources.pdf
+  utter_local_resouces:
+  - text: |
+      You can find resources at the following links
+      local_resources.pdf
+      lawrence-community-resources.pdf
+      United way 211
+      National Suicide Prevention 800-273-8255
+      Crisis Tex line text "Kansas" at 741741
+      Trevor Project 1-866-488-7386
+      Online Chat -> go to suicidepreventionlifeline.org and click "chat"
+      Kansas HeadQuarter https://www.ksphq.org/help/
+      Trans lifeline 877-565-8860
+      Find a therapist at psychologytoday.com
+
 actions:
 - action_default_fallback
 - action_reflect
 - action_search_facility
 - utter_greet
+
+forms:
+  suicide1_form:
+    ignored_intents:
+    - chitchat
+    required_slots:
+      - tools
+      - is_onsight
+      - time
+      - injuri_description
+      - currently_bleeding
+      - is_critical
+      - additional_drugs
+  suicide2_form:
+    ignored_intents:
+    - chitchat
+    required_slots:
+      - tools
+      - is_onsight
+      - time
+      - drug_type
+      - is_prescribed
+      - is_critical
+      - hospital_distance

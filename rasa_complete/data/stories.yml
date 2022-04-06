@@ -155,9 +155,11 @@ stories:
   - intent: mood_great
     entities:
     - feeling: perfect
+    - is_happy: true
   - slot_was_set:
     - feeling: perfect
   - action: action_reflect
+  - action: utter_how_to_help
 
 - story: interactive_story_1
   steps:
@@ -168,10 +170,87 @@ stories:
     - feeling: good
   - slot_was_set:
     - feeling: good
+    - is_happy: true
   - action: action_reflect
   - intent: search_provider
     entities:
-    - professional_type: doctor
+    - professional_type: psychiatrist
   - action: action_search_facility
+
+- story: suicidal person method 1
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
   - slot_was_set:
-    - address: 300 Hyde St, San Fransisco
+    - is_happy: false
+  - action: utter_reflect_feeling
+  - intent: suicide
+  - action: utter_ask_suicide_intent
+  - intent: affirm
+  - action: utter_ambivalence
+  - intent: affirm
+  - slot_was_set:
+    - is_suicidal: true
+  - action: utter_ask_suicide_attempt
+  - or:
+    - intent: affirm
+    - intent: suicide_method_1
+  - slot_was_set:
+    - is_onsight: true
+  - intent: utter_ambivalence
+  - action: utter_ask_tools
+  - intent: tools
+  - action: utter_stay_away
+  - intent: affirm
+  - slot_was_set:
+    - is_onsight: false
+  - action: utter_state_case_of_emergency
+  - action: utter_ask_time
+  - intent: time
+  - action: utter_ask_injuri_description
+  - intent: description
+  - action: utter_ask_currently_bleeding
+  - intent: deny
+  - action: utter_ask_is_critical
+  - intent: deny
+  - action: utter_ask_additional_drugs
+  - intent: deny
+  - action: utter_safety_plan
+  - action: utter_short_term_safety
+  - intent: affirm
+  - action: utter_long_term_safety
+  - intent: affirm
+  - action: utter_ask_update_feeling
+  - intent: mood_great
+  - action: utter_closing_statement
+  - action: utter_human_handoff
+  - or:
+    - intent: thanks
+    - intent: goodbye
+  - action: utter_goodbye
+
+
+# - story: suicidal person method 2
+  # steps: 
+  # - intent: greet
+  # - action: utter_greet
+  # - intent: mood_unhappy
+  # - slot_was_set:
+  #   - is_happy: false
+  # - action: utter_reflect_feeling
+  # - intent: suicide
+  # - action: utter_ask_suicide_intent
+  # - intent: affirm
+  # - action: utter_ambivalence
+  # - intent: affirm
+  # - slot_was_set:
+  #   - is_suicidal: true
+  # - action: utter_ask_suicide_attempt
+  # - intent: affirm
+  # - action: suicide2_form
+  # - active_loop: suicide2_form
+
+- story: Search Provider
+  steps: 
+  - intent: 
