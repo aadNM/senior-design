@@ -1,2 +1,5 @@
 venv/*
 RasaWorkspace/*
+.rasa/*
+rei.sh
+.rasactl
